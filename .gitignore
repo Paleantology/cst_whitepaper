@@ -1,0 +1,14 @@
+*.swp
+*.aux
+*.bbl
+*.blg
+*latexmk
+*.fls
+*.lof
+*.log
+*.out
+*.nav
+*.xml
+*.snm
+*.toc
+*.bcf
