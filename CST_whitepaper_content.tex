@@ -4,8 +4,10 @@
 \newcommand{\sarah}[1]{{\textcolor{amethyst}{[SF: #1]}}} % %SF comment
 \definecolor{teal}{rgb}{0.0, 0.5, 0.5}
 \newcommand{\rs}[1]{{\textcolor{teal}{[RS: #1]}}} % %RS comment
+\newcommand{\rsedit}[2]{\sout{#1}{\color{teal}{#2}}}
 \definecolor{pauburn}{RGB}{184,90,13}
 \newcommand{\jo}[1]{{\textcolor{pauburn}{[JO: #1]}}} % %JO comment
+\newcommand{\jedit}[2]{\sout{#1}{\color{pauburn}{#2}}}
 \definecolor{blue}{rgb}{0.0, 0.0, 1.0}
 \newcommand{\cn}[1]{{\textcolor{blue}{[CN: #1]}}} % %CN comment
 % find colors with percents at https://www.december.com/html/spec/colorrgbaper.html
@@ -15,9 +17,12 @@
     %\item \rs{Make sure article is framed around new title}
     %\item Citations in the introduction \sarah{I added a bib file with the references I cited in section 5, others should feel free to add to it}
     %\item \sarah{Rearranged and fleshed out sections 5.2 and 5.4. Take a look and make suggestions!} \cn{Looks great! I'll give all of sec. 5 a thorough read through on 8/28-29} {This is really nice. I added a few clarifying asides}
-    \item Add some intro text to 5 \cn{added intro text to 5 (what do y'all think); also modified text on L.54 to address discussion of teaching strategies, but may still want to expand more, either here or elsewhere in ms intro} \sarah{intro text to section 5 looks great!} \aw{I like this a lot}
-    \item Decide on pseudocode section (5.2) -- should it stay and be better integrated, be moved to a sub-section of 5.4, or removed? \rs{can we leave it for now - given the title change and overall expansion it might fit better now but let's see}
-    \item Maybe add an equity and inclusion call-out box on cultural issues surrounding asking for help -- what do others think of this idea? \sarah{I can start this on 8/28} \aw{This is a really nice idea!} \rs{my colleague Bryan, who studies inclusive education, says this is a good point - he suggested looking at John Henryism, Treisman 1992, and part 2 of https://www.thisamericanlife.org/550/transcript} \sarah{great suggestions!}
+    \item \rs{where is this being submitted? PeerJ?} \cn{PeerJ sounds good to me... Are there funds available for the OA pub fee?} \rs{I can put in a significant part. I was wondering if anyone knows where this fits best - it's not research, not quite review, a bit like the 10 Simple Rules papers but those all seem to be in PLoS Comp Bio, which is narrower} \aw{I'm open for discussion on this! I like PeerJ, just because its free to read without being super high cost for us, but realistically, I have a big chunk of money I can use for this, and iEvoBio can kick in some, too.}
+    %\item Add some intro text to 5 \cn{added intro text to 5 (what do y'all think); also modified text on L.54 to address discussion of teaching strategies, but may still want to expand more, either here or elsewhere in ms intro} \sarah{intro text to section 5 looks great!} \aw{I like this a lot}
+    %\item Decide on pseudocode section (5.2) -- should it stay and be better integrated, be moved to a sub-section of 5.4, or removed? 
+    %\rs{can we leave it for now - given the title change and overall expansion it might fit better now but let's see}
+    %\rs{I'm ok with it now}
+    %\item Maybe add an equity and inclusion call-out box on cultural issues surrounding asking for help -- what do others think of this idea? \sarah{I can start this on 8/28} \aw{This is a really nice idea!} \rs{my colleague Bryan, who studies inclusive education, says this is a good point - he suggested looking at John Henryism, Treisman 1992, and part 2 of https://www.thisamericanlife.org/550/transcript} \sarah{great suggestions!}
     %\item Write conclusions section \cn{Done 9/3 - feel free to comment!}
     \item \rs{thoughts on consistency and scaffolding of computing platforms}
     \item \rs{wondering if we should discuss languages up front as it's kind of key and gets discussed in terms of using RStudio/Jupyter but that's not exactly logical} \aw{This is an interesting point - a lot of biologists learn and use bash, but we don't even mention it other than obliquely} \rs{I was just about to say we need to include bash, especially as that ties in to Raspberry Pi and/or genomics} \rs{maybe before platforms talk about languages}
@@ -44,14 +49,14 @@ Perhaps the most obvious rationale is to teach computational biology, bioinforma
 and/or skills in working with large datasets.
 In such courses, instructors may be teaching particular skills or tools that are an integral part of the field.
 Bioinformatic skills are increasingly a core component of biology and biology education, and 
-support students' job and/or graduate school preparation \citep{WilsonSayres18}.
+support students' job and/or graduate school preparation \citep{WilsonSayres18}. \cn{Are we changing all mentions of "student" to "learner"? (like previous sentence, for example) Want to make sure before I go through the intro and change the words.}
 The vast majority of researchers in biology either use large datasets or could do so with sufficient training, suggesting that general training in effective use of large datasets is essential for students as well \citep{Barone17,Loman13}.
-An alternate motivation is to incorporate more data and analysis,
+An alternate motivation is to incorporate more data and analysis \cn{into coursework? I think the wording of this sentence is a bit confusing. I think I know what it's saying, but not sure enough of the intended meaning to reword.},
 which provides more opportunity for this aspect of the research experience to be
 integrated into coursework, as well as to incorporate active learning activities where
 students recognize biological theories by drawing conclusions from their own results
 \citep{Kjelvik19}.
-Also data literacy \citep{Gibson18}.
+Another rationale for teaching computation skills is to increase data literacy \citep{Gibson18}, which, in addition to enhancing learners' preparation for future careers, also better prepares learners to think critically about societal issues relevant to science and policy \citep{cook2014}.
 %Such work can come in a variety of forms from biological data science, to biostatistics, to research-based coursework, such as genomics or ecology. 
 %\rs{need not be bioinformatics to require computational hardware! Researchers might recognize this by making a connection to the work they do in research all having a computational component.}
 %\rs{want to say that this can be at all levels; also need some refs for this}
@@ -59,51 +64,37 @@ Also data literacy \citep{Gibson18}.
 However, there are significant barriers to teaching hands-on computation in biology classrooms \citep{Williams17}.
 While many biologists use computation in their research, relatively few have explicit training in computation. 
 Fewer still have training in how to teach computation \citep{Williams17}.
-Importantly, few biologists are housed in a department with the goal of teaching computation;
+Importantly, few biologists are housed in a department with the existing expertise or infrastructure for teaching computation;
 thus, there is often less familiarity with options for teaching computing or recent best practices. 
 %Biology faculty are less immersed in options for teaching coding, and that motivates this paper given what we all know individually, and expected that others would prefer to not investigate all the options on their own.
 \citet{Cummings10} describe the challenges in teaching bioinformatics as 
 ``infrastructure and logistics; instructor knowledge of bioinformatics and continuing education; and the breadth of bioinformatics, and the diversity of students and educational objectives.''
 Here we primarily address the first of these. 
 \rs{add whatever Williams says are barriers} \citep{Williams17}.
-%Thus, there is significant need for an understanding of resources to support computational instruction. %does this need citation? Probably - if anyone has one, feel free to add.
-%
-%to collectively refer to options ranging from local computers to shared cloud servers..
-%Here we discuss these options, provide suggestions for when each approach can server the needs of the instructor and students, as well as 
-%In addition, as in most fields of study, computational biology \rs{need an alternate phrase - this is narrow}
-%outline a variety of methods for teaching computational content.
-%, such as interactive tutorial sessions (live coding) and student-centered cooperative learning. 
 This review explains options available for instructors to teach computational course content
 (collectively referred to here as computing platforms),
 discusses how to choose the best computing platform for a course, 
 and describes effective strategies for teaching coding and data analysis.
 
-%Collectively called computing platforms, 
-%these refer to platforms that enable the instructor to demonstrate programming concepts, distribute course materials (notes, homeworks), and assess student outcomes.
-%Examples of course service technologies include RStudio Server, JupyterHub, and simpler strategies such as having learners install software on their personal computers.
-%Are computing platform just servers or all IDEs as well?
-%\rs{I commented out some details here as we'll discuss them later}
 
 %rs: this is the how section
-An important consideration is that the technology an educator uses to deliver their content supports the educator's learning objectives and enhance students' ability to learn. 
-%Educators have an array of choices in front of them. 
-Every course has a unique set of learning objectives and
+An important consideration is that the technology an educator uses to deliver their content supports the educator's learning objectives and enhances students' ability to learn. 
+Every course has a unique set of learning objectives, and
 every group of learners poses a unique set of challenges. 
 Such learning objectives related to computing may range from engaging students in the value of basic coding skills to building advanced skills and the ability to self-teach and work independently.
 An example of the former might include a freshman introductory biology lab focusing on data analysis, where students focus on the results from the data analysis. 
-In contrast, an upper-division research methods course may focus more on preparing students for independent data analysis may focus on self-sufficiency in coding as well as software management and installation.
-%\rs{give specific examples for prior sentences}
-%\aw{honestly, I had too many use cases there. eliminated the last one and gave an example of the second}
+In contrast, an upper-division course on research methods may focus more on preparing students for independent data analysis by emphasizing self-sufficiency in coding and software management and installation.
+In contrast, an upper-division course on research methods may focus more on preparing students for independent data analysis by emphasizing self-sufficiency in coding, and software management and installation.
 Additionally, the selected platform needs to support the type of work the students are doing.
-In the first example students might need to learn to make appropriate plots to visualize biological data; thus, the platform students work with needs to have the capacity to display plots.
-On the other hand, if a learning objective is to learn to manage genome-scale data on a remote server, a platform using a command-line interface to access a computing cluster may be more appropriate.
+In the first example, students might need to learn to make appropriate plots to visualize biological data; thus, the platform students work with needs to have the capacity to display plots.
+On the other hand, if a course objective is for students to learn to manage genome-scale data on a remote server, a platform using a command-line interface to access a computing cluster may be more appropriate.
 
 Much as a biology laboratory course requires specific laboratory equipment, teaching computation requires learners to be able to access specific software and functions.
 This may range from one or a few pieces of software that can be downloaded from the internet
 to installation of a computing language and development environment.
 For simplicity,
 the interfaces used by learners and the instructor should be uniform, as different versions of software could have different interfaces or commands.
-Learners also need  a way to compute outside of class, for example, to do the homework outside class hours.
+Learners also need  a way to compute outside of class -- for example, to do the homework outside class hours.
 Finally, the computing platform should allow students to focus on the coursework and instruction. 
 The learning platform must not interfere with students' focus on the learning objectives.
 %\rs{something about it's worth considering these ideas and choosing a platform that facilitates learning}
@@ -113,27 +104,9 @@ Another consideration is the consistency and scaffolding in selecting tools and/
 which suggests the value of a platform and tools on which students can scaffold their skills,
 rather than each course choosing its own tool.
 For example, students would likely find it challenging to use R in one class,
-python in another, and a genomics platform such as Galaxy in another.
-\rs{cite Guzdial on difficulties switching languages} Furthermore, switching languages and platforms
-can detract from time spent on other educational activities when the goal is not to explicitly
-teach the language or platform.
-
-%These limitations have caused instructors to seek other technologies to help students learn.
-%\rs{I think this whole paragraph is either redundant or contains detail that is best discussed in the detailed sections below}
-%\aw{I think you're right. It made more sense before we reorganized, and before the detials were filled in}
-%Here we review various solutions to supporting students' computing needs,
-%discuss when each platform might be more useful and appropriate,
-%and outline methods use to teach computing effectively and inclusively to biology students.
-%These solutions can be broadly grouped into local computing platforms and remote computing platforms.
-%Local computing platforms involve learners installing or working with personal or local machines as directed by an instructor.
-%Typically, in these setups, the learner is responsible for managing their own machine.
-%In this category, this review will discuss having students install software on their personal computers and using Raspberry Pi to set up small-scale bioinformatics machines. 
-%These computing platforms offer learners the comfort of working on their own machine, and allow them to exit the course with a set of software for use in their own research. 
-%Remote computing platforms involve students interacting with a server or other machine, typically off-site, that is not under control of the learner.
-%In this case, the instructor or support staff typically sets up and manages the server before and during the course.
-%These computing platforms minimize the amount of management the learner must do in terms of installing software and preparing their computer for class,
-%although students may experience an unfamiliar interface and will also have limited control over the platform.
-%Examples of this type of solution that we will discuss are RStudio Server and JupyterHub. 
+Python in another \citep{wu1990}, and a genomics platform such as Galaxy in another.
+\rs{cite Guzdial on difficulties switching languages} \aw{so I think that Guzdial post is just a synthesis - I found the original article he was quoting from (it's a thesis). Feel free to correct if I'm wrong, though.} \rs{could be - I don't remember details just that he's discussed issues of transitioning languages and I thought that's a worthwhile point to mention}. Furthermore, switching languages and platforms (i.e.\ learning a new skill set)
+can detract from time spent on other educational activities when the goal is not to explicitly teach the language or platform.
 
 Every choice of computing platform comes with costs and benefits. 
 In the case of local installs, the learner needs to have access to a reasonable personal computer, and the instructor needs to be prepared to support a variety of platforms (Macintosh OSX, Windows, Linux). 
@@ -147,6 +120,20 @@ Finally, we will explain terms related to high-performance cluster computing and
 \section{Programming Language or ??}
 
 \rs{Why R, python, bash; what about genomics/web tools eg Galaxy}
+\aw{I'm debating with myself about what I think should go in a section like this. To some extent, these tools are here because there languages have caught on really well. The tools have caught on because of the type of teaching they enable. You conceptually can teach C and C++ in a Jupyter notebook - but I don't know anyone who does. Perhaps we could have this section address the scope of the review. Maybe}
+\begin{itemize}
+    \item Scope of Review
+    \item In this review, we will discuss methods for courses in which some degree of programming or computational data analysis is integrated
+        \item In biology, R and Python are two dominant languages for working with datasets
+        \item Because of their popularity, they make common choices for integration into coursework, and large ecosystems of tools have sprung up to support teaching with these languages
+        \item All the tools discussed allow instructors to integrate programming adjacent skills, such as using a command line to run software via a UNIX or LINUX interface and using revision management to track changes to data and code
+    \item There are many platforms that are outside of the scope of this review, such as Galaxy, a graphical user interface for genomics analysis available via the web
+\end{itemize}
+\aw{
+I think whatever we want to do, we want to keep fairly brief
+}
+\rs{maybe move this to intro? I agree about outlining the scope and including all this should help. My thought about a section on programming language is that we talk about local installs but not what we're installing. Then talk a bit about python/R in those sections but that's way later. I'm trying to outline some pros/cons of the languages. What specifically helps support student learning or future research work. Could mention something like Galaxy here and explain pros/cons then say we won't discuss further.}
+
 
 \rs{given this section move some stuff about R from the RStudio Server section}
 
@@ -189,90 +176,56 @@ However, students who have little or no prior coding experience may struggle wit
 In some cases, software may not be available for a particular platform (e.g.\ RStudio on Chromebooks).
 Further, if students have previously installed a particular language, IDE, or package, they may have a different version than that used in class, which may complicate analyses later. This issue would present less of a problem in classes that primarily cover the foundations of coding, and/or with students who have little to no prior experience.
 
-\jo{Containers could be a separate computing platform section, but it seemed relevant here.}
-\rs{I like all this, but do feel it should go elsewhere - perhaps after cloud due to the comment about bridging the gap}
-\aw{now that I'm reading through, I think after cloud is probably the place to put this}
-One potential way to alleviate the difficulties of software installation is to
-use container software, like
-Docker,
-Singularity,
-or
-Podman.
-This allows the instructor to create a standard computing environment that each
-student can work within on their own computer.
-Instead of having to install multiple tools that will be used in the course,
-the students would only have to install the container software (e.g., Docker,
-which is cross-platform), and then they can download and run the environment
-created by the instructor.
-The functionality is very similar to a virtual machine, but lighter-weight and
-more efficient.
-Containers can be easily updated and distributed with cloud-based
-services like
-\href{https://hub.docker.com/}{DockerHub}.
-This allows the instructor to update the students' computing environment in
-real-time, effectively bridging the gap between ``local'' and ``cloud-based''
-computing platforms.
-
 In classes that have students do analytical work requiring substantial computational power, students may not have computers that are able to do that work. Some students may not have computers at all. For these reasons, local installs may not be the best option for a required course (i.e., if a student must take the course regardless of whether or not they have a computer they can bring to class) or for a course where a substantial amount of time is spent on computationally intensive work. For elective courses, the instructor may choose to list a computer as required material for the course and make that information available to students during the class registration period. However, this requirement limits the students who are able to take the class to those who have a computer to bring. With small classes, it may be possible to provide a computer to a student who does not have their own, and the instructor should also ensure that the student has access to a computer outside the classroom with necessary software for homework. An alternative solution may be to hold the class in a computer lab, but installation of software in computer labs may require IT support, depending on the institution.
 
-\subsection{Raspberry Pi}\label{RaspberryPi}
+\subsection{Single-board computers (SBCs)}\label{sbc}
 
 \rs{I feel like we could be up front about suggesting this as an amazing tool for more advanced computational biology with limitations at the intro level. I do wonder how much you could do with these as sensors in the field without teaching advanced computing skills for more integration of data in the classroom, but I feel like that's a tangent.}
 
-The Raspberry Pi Foundation is a 501(c)(3) charity that
-designs low-cost, high-performance, single-board computers.
-Their most basic model with WiFi and Bluetooth costs \$10 US Dollars.
-\rs{also you can get a pretty solid computer for \$99}
+Single-board computers (SBCs) are minimalist complete computers built on a
+singe circuit board.
+There are a number of organizations in the single-board computer market, but
+they were first popularized by the the Raspberry Pi Foundation.
+The most basic SBC models cost as little as \$10, and offer WiFi, Bluetooth,
+and quite high-performance computing.
+%\rs{also you can get a pretty solid computer for \$99}
 Generally, a Linux distribution, such as Raspbian, is installed
 on a microSD card and run on these machines.
-While there are many other organizations in the single-board computer market,
-we will focus on devices designed by Raspberry Pi, because they  are the most
-well-known.
-\jo{Or, we could keep it general and just refer to them as single-board
-    computers (SBCs)}
-\aw{I kind of like the approach of calling them SCBs, and then referring to Raspberry Pi 
-as the most famous of them} 
-\sarah{I agree, I kind of like the idea of keeping it general as well}
-\rs{I third, or whatever, the general approach, but let's just make sure we define sbc first thing).}
 
-A Raspberry is not immediately useful on its own, because it does not have a
-monitor or input devices.
-However, these machines can be used in two ways:
-\begin{enumerate}
-    \item Logging in ``remotely'' from another machine via WiFi or wired
-        connection, for example, using secure shell (SSH) protocol.
-        I.e., using it as a server. \rs{I'd reverse the order of this sentence - using it as a server and logging in remotely}
-    \item Booting into the desktop environment and using attached input and
-        output devices (e.g., monitor, keyboard, and mouse).
-        I.e., using it as a standard Linux PC. \rs{I'd reverse this to - using as a standard PC by attaching \dots}
-\end{enumerate}
-\aw{I think this would fit better as a paragraph}
-Having students use Raspberry Pis shares some similarities to using local
+An SBC is not immediately useful on its own, because it does not have a monitor
+or input devices.
+However, these machines can be used
+(1) as a server, by logging in ``remotely'' from another machine via WiFi or
+wired connection, for example, using secure shell (SSH) protocol,
+or
+(2) as a standard Linux PC, by booting into the desktop environment and using
+attached input and output devices (e.g., monitor, keyboard, and mouse).
+Having students use SBCs shares some similarities to using local
 installs, in the sense that the students can run software installed on their
-Pis.
-However, Raspberry Pis would ensure that all students are using the same
+own local machine.
+However, SBCs would ensure that all students are using the same
 computing environment and have the same capabilities.
-\rs{This is true if they buy them as part of a course requirement, which is reasonable given the cost is less than most textbooks}
-Furthermore, Raspberry Pis can be used together with all the other computing platforms we
+%\rs{This is true if they buy them as part of a course requirement, which is reasonable given the cost is less than most textbooks}
+Furthermore, SBCs can be used together with all the other computing platforms we
 discuss here.
 
-\subsubsection{What are the advantages of Raspberry Pis?}
+\subsubsection{Advantages of SBCs}
 
-Teaching with Raspberry Pis can be particularly effective at an institution
-with limited IT support.
-Even in a classroom without reliable internet, the instructor can set up a Pi
+Teaching with SBCs can be particularly effective at an institution with limited
+IT support.
+Even in a classroom without reliable internet, the instructor can set up an SBC
 as a local network for sharing code and data among the students.
 Thus, they can also be used in teaching environments not traditionally thought
 of as computing-friendly, such as in the field.
 
-Raspberry Pis can be particularly good tools for teaching students how
+SBCs can be particularly good tools for teaching students how
 to use remote Linux servers and HPC resources.
 Remote computing can be an abstract concept for students with limited
 computational background.
-Showing students how to ``remotely'' login from another computer to the
-Raspberry Pi they they have in-hand can make the idea of remote computing much
-more tangible.
-Furthermore, Raspberry Pis offer a way of teaching high-performance
+Showing students how to ``remotely'' login from another computer to their SBC
+they they have in-hand can make the idea of remote computing much more
+tangible.
+Furthermore, SBCs offer a way of teaching high-performance
 computing when such resources are not available.
 Even institutions with HPC facilities often do not support the use of these
 resources for teaching.
@@ -280,29 +233,29 @@ On a very modest budget, an instructor can set up a shared, ``mini''
 computing cluster to teach fundamental principles of HPC, such parallelization,
 message passing, and scalability.
 
-One particularly exciting pedagogical opportunity presented by Raspberry Pis is
+One particularly exciting pedagogical opportunity presented by SBCs is
 the integration of tech and computation to create biology curricula needed by
 students in the 21st century.
-Imagine a scenario where all students entering a program would receive a
-Raspberry Pi along with some basic training on how to use it.
-Because Raspberry Pis allow direct access to the computing board and
+Imagine a scenario where all students entering a program would receive an SBC
+along with some basic training on how to use it.
+Because SBCs allow direct access to the computing board and
 associated headers and ports, they are extremely modular, and can be coupled
 with many inexpensive accessories for collecting data.
-For example, for as little as \$40, one can get an add-on board that includes
-a variety of sensors, including a gyroscope, accelerometer, magnetometer,
-temperature, barometric pressure, and humidity.
+For example, for as little as \$40, one can purchase an add-on board that
+includes a variety of sensors, including a gyroscope, accelerometer,
+magnetometer, temperature, barometric pressure, and humidity.
 Students using these devices could collect observational or
 experimental data in the lab of their introductory biology classroom.
 Then, in a lecture or discussion session, they could learn to use basic
 scripting to process, visualize, ``clean,'' and analyze those data.
 If an undergraduate or graduate curriculum was designed for the students to
-continue using their Pi, data, and scripts throughout their coursework, this
+continue using their SBC, data, and scripts throughout their coursework, this
 could be a powerful approach to training the next-generation of computationally
 competent biologists.
 The development of such a curriculum goes far beyond the scope of what a
 typical teacher needs from a computing platform.
 Nonetheless, this aspirational idea is worth highlighting when discussing
-Raspberry Pis, because they can be used jointly with all the other computing platforms
+SBCs, because they can be used jointly with all the other computing platforms
 discussed in this paper.
 
 
@@ -310,12 +263,12 @@ discussed in this paper.
 Diversity and Inclusion call out box! 
 \begin{snugshade*}
 \begin{lstlisting}
-    The low cost of high-performance, single-board computers, like Raspberry Pi
-    devices, can make the classroom more equitable.
+    The low cost of high-performance, single-board computers can make the
+    classroom more equitable.
     With a cost as low as \$10 per computer, it requires minimal investment from
     students, or, more ideally, increases the likelihood that an institution or
     funding agency can cover this cost.
-    Using Raspberry Pis also ensures that all students experience the same
+    Using SBCs also ensures that all students experience the same
     computing environment and capabilities.
     Furthermore, the low cost can allow the students to keep the computer
     after the course is over.
@@ -324,9 +277,9 @@ Diversity and Inclusion call out box!
 \end{snugshade*}
 \end{framed}}
 
-\subsubsection{What are the disadvantages of Raspberry Pis?}
+\subsubsection{What are the disadvantages of SBCs?}
 
-The initial setup of a Raspberry Pi requires time and effort to install the
+The initial setup of an SBC requires time and effort to install the
 Linux distribution on the microSD card.
 If the primary goal of the course is to use technology to teach biology,
 this work should be done by the instructor prior to the class.
@@ -338,24 +291,21 @@ turning the initial setup into an active-learning exercise done
 at the beginning of the class could be a very informative
 learning experience for the students.
 
-Even after the initial setup, Raspberry Pis are not immediately useful on their
-own.
-The students require either another computer to login to the Pi via SSH, or
-peripherals (e.g., monitor, keyboard, and mouse) to use the Pi as a PC.
+Even after the initial setup, SBCs are not immediately useful on their own.
+The students require either another computer to login to the SBC via SSH, or
+peripherals (e.g., monitor, keyboard, and mouse) to use the SBC as a PC.
 By the time these peripherals are factored in, the total cost could become
 similar to an entry level laptop.
-However, the students can benefit from the modularity of the Raspberry Pi
-system.
-The peripherals can be re-used, and the students could keep the Raspberry Pi
-itself.
+However, the students can benefit from the modularity of the SBC system.
+The peripherals can be re-used, and the students could keep the SBC itself.
 This is not possible with laptops.
 
-When not used as a PC (i.e., without peripherals), using a Raspberry Pi can be
+When not used as a PC (i.e., without peripherals), using an SBC can be
 quite unintuitive for students not familiar with the Linux command line.
 For example, it would be counter-productive to take the time necessary
 out of an introductory biology class to teach students to become proficient
-in using a Raspberry Pi from the command line.
-While this weakness can be overcome by using the Pi as a PC, this option does
+in using an SBC from the command line.
+While this weakness can be overcome by using the SBC as a PC, this option does
 require additional investment and logistics to provide the students access to
 keyboards, mice, and monitor.
 
@@ -501,7 +451,7 @@ In sum, this is a flexible tool, and one that allows an instructor to scale thei
 Diversity and Inclusion call out box! 
 \begin{snugshade*}
 \begin{lstlisting}
-Server-based course service technologies allow learners to access course materials via the web. The actual computations performed via a JupyterHub or RStudio Server are carried out on a remote machine. This can level the playing field for students who may need to access their coursework on multiple computers (such as students relying on computer lab or library access to machines) and students who have old machines.
+Server-based computing platforms allow learners to access course materials via the web. The actual computations performed via a JupyterHub or RStudio Server are carried out on a remote machine. This can level the playing field for students who may need to access their coursework on multiple computers (such as students relying on computer lab or library access to machines) and students who have old machines or other limitations such as Chromebooks.
 \end{lstlisting}
 \end{snugshade*}
 \end{framed}}
@@ -572,6 +522,35 @@ Asking for help is critical for students to be able to overcome confusion, solid
 \end{lstlisting}
 \end{snugshade*}
 \end{framed}}
+
+\subsection{Bridging the gap between local and cloud-based approaches}
+
+%\jo{Containers could be a separate computing platform section, but it seemed relevant here.}
+%\rs{I like all this, but do feel it should go elsewhere - perhaps after cloud due to the comment about bridging the gap}
+%\aw{now that I'm reading through, I think after cloud is probably the place to put this}
+%\jo{I agree. This was up in local installs; moving it down here and rewording a bit.}
+Container software, such as
+Docker,
+Singularity,
+or
+Podman,
+offer a way to \rsedit{bridge the gap between}{} teach\rsedit{ing}{} with \rsedit{}{the simplicity of }local installs \rsedit{and}{while utilizing the consistency of}
+cloud-based computing platforms.
+Containers allow the instructor to create a standard computing environment that
+each student can work within on their own computer.
+Instead of having to install multiple tools that will be used in the course,
+the students would only have to install the container software (e.g., Docker,
+which is cross-platform), and then they can download and run the environment
+created by the instructor.
+The functionality is very similar to a virtual machine, but lighter-weight and
+more efficient.
+Containers can be easily updated and distributed with cloud-based
+services like
+\href{https://hub.docker.com/}{DockerHub}.
+This allows the instructor to update the students' computing environment in
+real-time.
+Of course, this still has the same disadvantages discussed above of having
+students run analyses on their own computer.
 
 \section{Teaching methods}
 
@@ -650,14 +629,19 @@ An important component is providing learners with a solution set after they have
 \subsection{Focusing on coding as problem-solving}
 \rs{this seems tangential to computing platforms/computing platforms and even to teaching students how to code - as much as I appreciate the ideas in here I don't think they fit in this paper}
 \sarah{That's fair -- this bit came from a small comment from Brian O'Meara during iEvoBio and does not necessarily belong in the paper. It could also be condensed and added under "other challenges and tools" below}
-One of the main skills underlying learning to code is learning how to solve problems. 
-In some cases, learning the proper syntax of a given language causes an additional barrier to learners.
-When the learning outcomes are not necessarily tied to learners having full mastery of a specific language's syntax, shorthand notation can be used to outline the steps the learner would take to get to the end result, removing the added layer of correct syntax and highlighting the importance of the problem-solving elements.
-This method, called pseudocode, can help learners logically scaffold their code, regardless of which language they will be coding in.
-In some courses \citep[e.g.,][]{olsen_using_2005}, learners are required to write the solution to their problem in pseudocode and then use that pseudocode to write their code.
-Others rely on pseudocode during timed exams to relieve exam stress.
-Note, however, that pseudocode written by different examiners may differ in its adherence to unwritten language rules, and thus could cause confusion among learners \citep{cutts_code_2014}. A better approach is to use a formalized pseudocode, where the meaning behind each word is clearly and unambiguously defined \citep{cutts_code_2014}.
+\rs{I think I'm good with leaving it in now given changes to the overall paper, and I added a couple of sentences. It might be more motivational and go earlier in the paper rather than here in teaching methods.}
 
+One of the main skills underlying learning to code is learning how to solve problems. 
+Writing code can be viewed as a method of communicating to the computer the precise steps of the analysis.
+In fact, code serves as a written record of the analytical steps, and is one that is instantly reproducible.
+%In some cases, learning the proper syntax of a given language causes an additional barrier to learners.
+When the learning outcomes are not necessarily tied to learners having full mastery of a specific language's syntax, shorthand notation can be used to outline the steps the learner would take to get to the end result, removing the added layer of correct syntax and highlighting the importance of the problem-solving elements.
+This method, called pseudocode, can help learners logically scaffold their thought process, and therefore their code, regardless of which language they will be coding in.
+Learners can be required to write the solution to their problem in pseudocode to demonstrate their thought process, and then use that pseudocode to write their code \citep[e.g.,][]{olsen_using_2005}.
+Courses may rely on pseudocode during timed exams to relieve exam stress.
+Note, however, that pseudocode written by different examiners may differ in its adherence to unwritten language rules, and thus could cause confusion among learners \citep{cutts_code_2014}. 
+A better approach is to use a formalized pseudocode, where the meaning behind each word is clearly and unambiguously defined \citep{cutts_code_2014}.
+\rs{not sure about these last two sentences}
 
 \subsection{Cooperative Learning} 
 \sarah{I re-named this from pair-based learning to cooperative learning to include group work}
@@ -670,7 +654,7 @@ One creative cooperative learning teaching tool for computational biology is pai
 This exercise forces students to think carefully about the process of creating code.
 Even if students are not expected to work through examples or produce a project in pairs or groups, cooperative learning can still be implemented by facilitating discussion and collaboration among students.
 This can be done in class (e.g., through think-pair-share exercises, in which students are encouraged to think about a problem individually, then discuss in pairs or small groups) or outside of class through discussion forums.
-For instance, students could be encouraged or required to participate in discussions on the course website (e.g., Blackboard/Moodle) or a Slack workspace created for the class, or to comment on other students' GitHub projects.
+For instance, students could be encouraged or required to participate in discussions on the course website (e.g., Blackboard/Moodle) or a Slack workspace created for the class, or to comment on other students' GitHub projects. \rs{We haven't introduced Github here so people might not know it. Also, I know faculty have mixed success with discussion forums}
 Learning from other students can be a powerful way to get students engaged with the course work, and can solidify their understanding by having them teach each other \citep{treisman1992studying}.
 
 However, as most students and instructors know, group work can create problems and strife.
@@ -728,10 +712,14 @@ Furthermore, using assignments that can be automatically graded (e.g., mimir cla
 \subsubsection{Plagiarism}
 Writing code is more similar to math than to writing, as there is a correct answer (or perhaps several correct answers), and it can be difficult to detect whether students arrived at that answer independently or through copying someone else's solution.
 Plagiarism is can be exacerbated by the common phenomenon of searching for solutions to a given problem online and copying or adapting posted solutions without attributing proper credit \citep{gaspar_restoring_2007}. 
+One approach to ensure students understand code is to require commented explanation of each component of their code, and ensure these comments are different for each student.
 Some of the programs that grade code include plagiarism detection components \citep{pears_survey_2007}, which can help instructors identify when plagiarism has occurred.
 Instructors are encouraged to discuss these issues and reinforce the importance of citing sources.
 Another approach is to allow students to work on assessments as a group, but have each student write out their own pseudocode explanations of the code.
-\rs{it's like math rather than writing - there's a right answer and often it's hard to detect whether someone got their independently or by copying - Linda might have thoughts on this} \sarah{I added this comparison to the paragraph}
+In class quizzes may also use faded examples and require comments,
+especially as it is widely accepted that learners should be able to search for the functions
+and arguments to functions that are needed to implement their analytical work.
+%\rs{it's like math rather than writing - there's a right answer and often it's hard to detect whether someone got their independently or by copying - Linda might have thoughts on this} \sarah{I added this comparison to the paragraph}
 
 \section{Conclusions}
 
