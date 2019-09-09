@@ -14,18 +14,15 @@
 
 \begin{itemize}
 \item [\textbf{TODO}]
+    \item \aw{I cleared out some of the edit marks so it is a little easier to see. I was feeling a bit distracted by them in some places, especially where the text is a little more final. I did a commit right before, so all the comments are preserved.}
+
     %\item \rs{Make sure article is framed around new title}
     %\item Citations in the introduction \sarah{I added a bib file with the references I cited in section 5, others should feel free to add to it}
-    %\item \sarah{Rearranged and fleshed out sections 5.2 and 5.4. Take a look and make suggestions!} \cn{Looks great! I'll give all of sec. 5 a thorough read through on 8/28-29} {This is really nice. I added a few clarifying asides}
     \item \rs{where is this being submitted? PeerJ?} \cn{PeerJ sounds good to me... Are there funds available for the OA pub fee?} \rs{I can put in a significant part. I was wondering if anyone knows where this fits best - it's not research, not quite review, a bit like the 10 Simple Rules papers but those all seem to be in PLoS Comp Bio, which is narrower} \aw{I'm open for discussion on this! I like PeerJ, just because its free to read without being super high cost for us, but realistically, I have a big chunk of money I can use for this, and iEvoBio can kick in some, too.}
-    %\item Add some intro text to 5 \cn{added intro text to 5 (what do y'all think); also modified text on L.54 to address discussion of teaching strategies, but may still want to expand more, either here or elsewhere in ms intro} \sarah{intro text to section 5 looks great!} \aw{I like this a lot}
-    %\item Decide on pseudocode section (5.2) -- should it stay and be better integrated, be moved to a sub-section of 5.4, or removed? 
-    %\rs{can we leave it for now - given the title change and overall expansion it might fit better now but let's see}
-    %\rs{I'm ok with it now}
+    \item \aw{Student --> learner}
     %\item Maybe add an equity and inclusion call-out box on cultural issues surrounding asking for help -- what do others think of this idea? \sarah{I can start this on 8/28} \aw{This is a really nice idea!} \rs{my colleague Bryan, who studies inclusive education, says this is a good point - he suggested looking at John Henryism, Treisman 1992, and part 2 of https://www.thisamericanlife.org/550/transcript} \sarah{great suggestions!}
-    %\item Write conclusions section \cn{Done 9/3 - feel free to comment!}
     \item \rs{thoughts on consistency and scaffolding of computing platforms}
-    \item \rs{wondering if we should discuss languages up front as it's kind of key and gets discussed in terms of using RStudio/Jupyter but that's not exactly logical} \aw{This is an interesting point - a lot of biologists learn and use bash, but we don't even mention it other than obliquely} \rs{I was just about to say we need to include bash, especially as that ties in to Raspberry Pi and/or genomics} \rs{maybe before platforms talk about languages}
+    \item \rs{wondering if we should discuss languages up front as it's kind of key and gets discussed in terms of using RStudio/Jupyter but that's not exactly logical} \aw{This is an interesting point - a lot of biologists learn and use bash, but we don't even mention it other than obliquely} \rs{I was just about to say we need to include bash, especially as that ties in to Raspberry Pi and/or genomics} \rs{maybe before platforms talk about languages} \aw{Discussion welcome from everyone on this point! I like the idea that }
     \item \rs{thinking we could use some details - maybe boxes of summarized case studies; also suggestions of where instructors get data and/or lesson plans eg QUBES} \aw{I really like this idea!} 
 \end{itemize}
 
@@ -49,24 +46,20 @@ Perhaps the most obvious rationale is to teach computational biology, bioinforma
 and/or skills in working with large datasets.
 In such courses, instructors may be teaching particular skills or tools that are an integral part of the field.
 Bioinformatic skills are increasingly a core component of biology and biology education, and 
-support students' job and/or graduate school preparation \citep{WilsonSayres18}. \cn{Are we changing all mentions of "student" to "learner"? (like previous sentence, for example) Want to make sure before I go through the intro and change the words.}
+support students' job and/or graduate school preparation \citep{WilsonSayres18}. 
 The vast majority of researchers in biology either use large datasets or could do so with sufficient training, suggesting that general training in effective use of large datasets is essential for students as well \citep{Barone17,Loman13}.
-An alternate motivation is to incorporate more data and analysis \cn{into coursework? I think the wording of this sentence is a bit confusing. I think I know what it's saying, but not sure enough of the intended meaning to reword.},
+An alternate motivation is to incorporate more data and analysis into course work
 which provides more opportunity for this aspect of the research experience to be
 integrated into coursework, as well as to incorporate active learning activities where
 students recognize biological theories by drawing conclusions from their own results
 \citep{Kjelvik19}.
 Another rationale for teaching computation skills is to increase data literacy \citep{Gibson18}, which, in addition to enhancing learners' preparation for future careers, also better prepares learners to think critically about societal issues relevant to science and policy \citep{cook2014}.
-%Such work can come in a variety of forms from biological data science, to biostatistics, to research-based coursework, such as genomics or ecology. 
-%\rs{need not be bioinformatics to require computational hardware! Researchers might recognize this by making a connection to the work they do in research all having a computational component.}
-%\rs{want to say that this can be at all levels; also need some refs for this}
 
 However, there are significant barriers to teaching hands-on computation in biology classrooms \citep{Williams17}.
 While many biologists use computation in their research, relatively few have explicit training in computation. 
 Fewer still have training in how to teach computation \citep{Williams17}.
 Importantly, few biologists are housed in a department with the existing expertise or infrastructure for teaching computation;
 thus, there is often less familiarity with options for teaching computing or recent best practices. 
-%Biology faculty are less immersed in options for teaching coding, and that motivates this paper given what we all know individually, and expected that others would prefer to not investigate all the options on their own.
 \citet{Cummings10} describe the challenges in teaching bioinformatics as 
 ``infrastructure and logistics; instructor knowledge of bioinformatics and continuing education; and the breadth of bioinformatics, and the diversity of students and educational objectives.''
 Here we primarily address the first of these. 
@@ -109,30 +102,49 @@ Python in another \citep{wu1990}, and a genomics platform such as Galaxy in anot
 can detract from time spent on other educational activities when the goal is not to explicitly teach the language or platform.
 
 Every choice of computing platform comes with costs and benefits. 
-In the case of local installs, the learner needs to have access to a reasonable personal computer, and the instructor needs to be prepared to support a variety of platforms (Macintosh OSX, Windows, Linux). 
-In the case of remote computing platforms, the learner can interact with the course material from any computer, or even a smartphone.
-But the instructor needs to be able to set up the platform, and there may be financial costs associated with hosting the server.
-\sarah{Using local computing platforms like Raspberry Pis also come with financial costs}
-%also students are less likely to be self-sufficient at the end
-We will be explaining different computing platforms with a special eye towards serving diverse sets of learners, both in terms of their motivations, in terms of their life experiences, and in terms of their access to technology.
-Finally, we will explain terms related to high-performance cluster computing and cloud computing, as some computing platforms require their use.
+In this review, we will discuss tools and techniques to facilitate teaching computation in courses with some degree of programming or data analysis.
+We explain different computing platforms with a special eye towards serving diverse sets of learners, 
+in terms of their motivations, life experiences, and access to technology.
+In particular, we will focus on programming languages that are common in biology, R and Python. 
+Lastly, we review effective pedagogical techniques for helping learners thrive in a computational classroom.
 
-\section{Programming Language or ??}
+\section{Choice of computing language}
+
+One of the first choices an instructor needs to make when they plan coursework is what computing language to use.
+In biology, R and Python are common languages.
+Bash, a type of UNIX command-line language, is commonly used to run software and automate tasks.
+There are multiple considerations to take into account for this choice.
+In particular, taking into account \textit{consistency}, \textit{current status of research tools}, and \textit{comfort} will make this choice easier.
+\textit{Consistency} refers to consistency of the language's use throughout the curriculum.
+Prior research \cite{wu1990} indicates that switching languages can be associated with learning loss in novices.
+Therefore, in order to deepen and strengthen learners' command of languages, integrating the same language consistently throughout the curriculum may be helpful.
+For example, if an instructor is integrating a computational component into a genetics lab, they might check with someone teaching biostatistics or bioinformatics to see what language they are using.
+
+
+The \textit{current status of research tools} is also worth considering. 
+If the goal of a course is for learners to understand both biology and computation, the instructor will want to choose a language with active development of tools for research in that field.
+For example, many genomic and phylogenetic tools are written in Python. 
+On the other hand, more ecological and comparative biology tools are written in R.
+Therefore, the choice of language will inform the subset of tools available to the instructor and the learners.
+Finally, instructors should consider their own \textit{comfort}. 
+Teaching requires fluent and comfortable discussion of concepts and tools.
+Instructor knowledge must factor in to this.
+Additionally, community resources exist for some languages. 
+For example, QUBES is a National Science Foundation-sponsored (NSF) project that publishes lessons and sponsors instructor mentoring groups in various scientific disciplines.
+An instructor may feel more empowered to teach well if there is a strong sense of community in their language, with pathways to ask for help and access resources.
+
+It is also worth noting that not all tasks that are computational necessitate the addition of programming into the curriculum.
+For example, tools such as the NSF-sponsored Galaxy project allow instructors to help learners run bioinformatic and genomic software via a point-and-click internet interface.
+If the goal of a course is to demonstrate answering a particular question, but not to dig too deep into the methodology of how that is done, this type of interface may be sufficient.
+Teaching with these resources, however, is beyond the scope of this article.
+
 
 \rs{Why R, python, bash; what about genomics/web tools eg Galaxy}
-\aw{I'm debating with myself about what I think should go in a section like this. To some extent, these tools are here because there languages have caught on really well. The tools have caught on because of the type of teaching they enable. You conceptually can teach C and C++ in a Jupyter notebook - but I don't know anyone who does. Perhaps we could have this section address the scope of the review. Maybe}
-\begin{itemize}
-    \item Scope of Review
-    \item In this review, we will discuss methods for courses in which some degree of programming or computational data analysis is integrated
-        \item In biology, R and Python are two dominant languages for working with datasets
-        \item Because of their popularity, they make common choices for integration into coursework, and large ecosystems of tools have sprung up to support teaching with these languages
-        \item All the tools discussed allow instructors to integrate programming adjacent skills, such as using a command line to run software via a UNIX or LINUX interface and using revision management to track changes to data and code
-    \item There are many platforms that are outside of the scope of this review, such as Galaxy, a graphical user interface for genomics analysis available via the web
-\end{itemize}
-\aw{
-I think whatever we want to do, we want to keep fairly brief
-}
-\rs{maybe move this to intro? I agree about outlining the scope and including all this should help. My thought about a section on programming language is that we talk about local installs but not what we're installing. Then talk a bit about python/R in those sections but that's way later. I'm trying to outline some pros/cons of the languages. What specifically helps support student learning or future research work. Could mention something like Galaxy here and explain pros/cons then say we won't discuss further.}
+%\aw{I'm debating with myself about what I think should go in a section like this. To some extent, these tools are here because there languages have caught on really well. The tools have caught on because of the type of teaching they enable. You conceptually can teach C and C++ in a Jupyter notebook - but I don't know anyone who does. Perhaps we could have this section address the scope of the review. Maybe}
+
+%\aw{I think whatever we want to do, we want to keep fairly brief}
+%\rs{maybe move this to intro? I agree about outlining the scope and including all this should help. My thought about a section on programming language is that we talk about local installs but not what we're installing. Then talk a bit about python/R in those sections but that's way later. I'm trying to outline some pros/cons of the languages. What specifically helps support student learning or future research work. Could mention something like Galaxy here and explain pros/cons then say we won't discuss further.}
+%\aw{I went ahead and integrated the `scope' stuff into the intro. It's a more effective closing paragraph than what was there. I changed this section header to `Choice of computing language', which might frame things more effectively - not so much what language is `best', but which supports the learning goals of the instructor?} \rs{sounds good}
 
 
 \rs{given this section move some stuff about R from the RStudio Server section}
@@ -351,7 +363,6 @@ limit instructors from using computers they have on hand to serve their coursewo
 Likewise, due to security concerns, it may not be possible to operate a server on a university HPC.
 In this case, the instructor will likely have to turn to cloud compute providers.
 Many of these providers are affordable for small classes or low-memory tasks, but costs will scale with users, storage, and memory requirements.
-\rs{I had a case where the firewall interfered with logging into Amazon servers and IT had to specifically allow the server to be accessed. Also problematic if the server or host is down.}\aw{I had to call in the middle of class to have my github statis page for my course specifically whitelisted}
 
 These technologies do interact with the internet.
 Therefore, when problems arise in the classroom, the instructor must distinguish between problems with the server itself, with a 
@@ -587,8 +598,7 @@ For this reason, written examples are most effective when integrated with other 
 
 
 \subsubsection{Live coding}\label{Livecoding}
-\sarah{Which version is correct? "live coding", "live-coding", or "livecoding"}
-\rs{see https://software-carpentry.org/blog/2016/04/tips-tricks-live-coding.html}
+
 Live coding is a form of example-based learning in which learners watch the instructor solve problems and the learners follow along. 
 In most cases, learners are expected to code along with the instructors. 
 The act of typing along forces learners to actively enter code, which is a hands-on version of a worked example.
@@ -654,7 +664,7 @@ One creative cooperative learning teaching tool for computational biology is pai
 This exercise forces students to think carefully about the process of creating code.
 Even if students are not expected to work through examples or produce a project in pairs or groups, cooperative learning can still be implemented by facilitating discussion and collaboration among students.
 This can be done in class (e.g., through think-pair-share exercises, in which students are encouraged to think about a problem individually, then discuss in pairs or small groups) or outside of class through discussion forums.
-For instance, students could be encouraged or required to participate in discussions on the course website (e.g., Blackboard/Moodle) or a Slack workspace created for the class, or to comment on other students' GitHub projects. \rs{We haven't introduced Github here so people might not know it. Also, I know faculty have mixed success with discussion forums}
+For instance, students could be encouraged or required to participate in discussions on the course website (e.g., Blackboard/Moodle) or a Slack workspace created for the class, or to do peer review of other students' projects. 
 Learning from other students can be a powerful way to get students engaged with the course work, and can solidify their understanding by having them teach each other \citep{treisman1992studying}.
 
 However, as most students and instructors know, group work can create problems and strife.
@@ -731,7 +741,7 @@ In this paper, we have outlined the costs and benefits of several popular comput
 Given the variety of options, instructors should be able to find a platform that best fits their course learning objectives, available resources, class size, and learner backgrounds.
 One important consideration in this decision is how the platform of choice affects learner access to course content.
 Many of these computing platforms can improve inclusion and diversity in the classroom (and thus, ultimately, in fields and careers that incorporate computation) by providing access to the same technologies to all learners.
-We have also discussed several teaching strategies for computational biology and other courses with computation, with the goal of improving student learning and retention.\cn{Sorry, I tried to stick with "learner" but I couldn't come up with another way to say "student learning"... feel free to suggest.} 
+We have also discussed several teaching strategies for computational biology and other courses with computation, with the goal of improving student learning and retention.
 
 %Main takeaways: 
 %All types of computing platforms have pros and cons.
