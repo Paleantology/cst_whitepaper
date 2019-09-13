@@ -18,11 +18,13 @@
 
     %\item \rs{Make sure article is framed around new title}
     %\item Citations in the introduction \sarah{I added a bib file with the references I cited in section 5, others should feel free to add to it}
-    \item \rs{where is this being submitted? PeerJ?} \cn{PeerJ sounds good to me... Are there funds available for the OA pub fee?} \rs{I can put in a significant part. I was wondering if anyone knows where this fits best - it's not research, not quite review, a bit like the 10 Simple Rules papers but those all seem to be in PLoS Comp Bio, which is narrower} \aw{I'm open for discussion on this! I like PeerJ, just because its free to read without being super high cost for us, but realistically, I have a big chunk of money I can use for this, and iEvoBio can kick in some, too.}
+    \item \rs{where is this being submitted? PeerJ?} \cn{PeerJ sounds good to me... Are there funds available for the OA pub fee?} \rs{I can put in a significant part. I was wondering if anyone knows where this fits best - it's not research, not quite review, a bit like the 10 Simple Rules papers but those all seem to be in PLoS Comp Bio, which is narrower} \aw{I'm open for discussion on this! I like PeerJ, just because its free to read without being super high cost for us, but realistically, I have a big chunk of money I can use for this, and iEvoBio can kick in some, too.}\cn{Chiming in to say I don't have strong feelings about venue... it's also not an important factor for my PandT committee.}
+    \rs{I am good publishing whereever - I was wondering who accepts this sort of article. Might look at F1000 research as well, or a teaching journal eg The American Biology Teacher} \aw{I'd be really interested in F1000, since the model is kind of cool, but it looks like they don't do review. I can send an inquiry, though}
+    
     \item \aw{Student --> learner}
     %\item Maybe add an equity and inclusion call-out box on cultural issues surrounding asking for help -- what do others think of this idea? \sarah{I can start this on 8/28} \aw{This is a really nice idea!} \rs{my colleague Bryan, who studies inclusive education, says this is a good point - he suggested looking at John Henryism, Treisman 1992, and part 2 of https://www.thisamericanlife.org/550/transcript} \sarah{great suggestions!}
     \item \rs{thoughts on consistency and scaffolding of computing platforms}
-    \item \rs{wondering if we should discuss languages up front as it's kind of key and gets discussed in terms of using RStudio/Jupyter but that's not exactly logical} \aw{This is an interesting point - a lot of biologists learn and use bash, but we don't even mention it other than obliquely} \rs{I was just about to say we need to include bash, especially as that ties in to Raspberry Pi and/or genomics} \rs{maybe before platforms talk about languages} \aw{Discussion welcome from everyone on this point! I like the idea that }
+    %\item \rs{wondering if we should discuss languages up front as it's kind of key and gets discussed in terms of using RStudio/Jupyter but that's not exactly logical} \aw{This is an interesting point - a lot of biologists learn and use bash, but we don't even mention it other than obliquely} \rs{I was just about to say we need to include bash, especially as that ties in to Raspberry Pi and/or genomics} \rs{maybe before platforms talk about languages} \aw{Discussion welcome from everyone on this point! I like the idea that }
     \item \rs{thinking we could use some details - maybe boxes of summarized case studies; also suggestions of where instructors get data and/or lesson plans eg QUBES} \aw{I really like this idea!} 
 \end{itemize}
 
@@ -48,22 +50,27 @@ In such courses, instructors may be teaching particular skills or tools that are
 Bioinformatic skills are increasingly a core component of biology and biology education, and 
 support students' job and/or graduate school preparation \citep{WilsonSayres18}. 
 The vast majority of researchers in biology either use large datasets or could do so with sufficient training, suggesting that general training in effective use of large datasets is essential for students as well \citep{Barone17,Loman13}.
-An alternate motivation is to incorporate more data and analysis into course work
-which provides more opportunity for this aspect of the research experience to be
-integrated into coursework, as well as to incorporate active learning activities where
+An alternate motivation is to incorporate more data and analysis into course work.
+Integrating data into courses provides more opportunity for students to experience the research process, and the ability to incorporate active learning activities where
 students recognize biological theories by drawing conclusions from their own results
 \citep{Kjelvik19}.
-Another rationale for teaching computation skills is to increase data literacy \citep{Gibson18}, which, in addition to enhancing learners' preparation for future careers, also better prepares learners to think critically about societal issues relevant to science and policy \citep{cook2014}.
+Another rationale for teaching computational skills is to increase data literacy \citep{Gibson18}, which, in addition to enhancing learners' preparation for future careers, also better prepares learners to think critically about societal issues relevant to science and policy \citep{cook2014}.
 
 However, there are significant barriers to teaching hands-on computation in biology classrooms \citep{Williams17}.
 While many biologists use computation in their research, relatively few have explicit training in computation. 
 Fewer still have training in how to teach computation \citep{Williams17}.
-Importantly, few biologists are housed in a department with the existing expertise or infrastructure for teaching computation;
+Importantly, few biologists are housed in a department with the existing expertise or infrastructure for teaching computation \citep{Williams17};
 thus, there is often less familiarity with options for teaching computing or recent best practices. 
 \citet{Cummings10} describe the challenges in teaching bioinformatics as 
 ``infrastructure and logistics; instructor knowledge of bioinformatics and continuing education; and the breadth of bioinformatics, and the diversity of students and educational objectives.''
-Here we primarily address the first of these. 
-\rs{add whatever Williams says are barriers} \citep{Williams17}.
+\citet{Williams17} similarly cites faculty training, infrastructure, and student interest and preparation.
+Here our goal is to address issues of infrastructure and logistics,
+and make recommendations for faculty practice.
+We suggest that those seeking training consider programs such as Software and Data Carpentry workshops
+to address the issue of faculty training.
+%We do not address issues of instructor knowledge of computing; thus, we are aiming primarily at 
+%faculty with at least some computational skills and an interest in integrating computation into their courses.
+%Williams: lack of faculty training, lack of student interest in bioinformatics; lack of student preparation in mathematics, statistics, and computer science; already overly full curricula; and limited access to resources,
 This review explains options available for instructors to teach computational course content
 (collectively referred to here as computing platforms),
 discusses how to choose the best computing platform for a course, 
@@ -76,7 +83,6 @@ Every course has a unique set of learning objectives, and
 every group of learners poses a unique set of challenges. 
 Such learning objectives related to computing may range from engaging students in the value of basic coding skills to building advanced skills and the ability to self-teach and work independently.
 An example of the former might include a freshman introductory biology lab focusing on data analysis, where students focus on the results from the data analysis. 
-In contrast, an upper-division course on research methods may focus more on preparing students for independent data analysis by emphasizing self-sufficiency in coding and software management and installation.
 In contrast, an upper-division course on research methods may focus more on preparing students for independent data analysis by emphasizing self-sufficiency in coding, and software management and installation.
 Additionally, the selected platform needs to support the type of work the students are doing.
 In the first example, students might need to learn to make appropriate plots to visualize biological data; thus, the platform students work with needs to have the capacity to display plots.
@@ -98,7 +104,8 @@ which suggests the value of a platform and tools on which students can scaffold 
 rather than each course choosing its own tool.
 For example, students would likely find it challenging to use R in one class,
 Python in another \citep{wu1990}, and a genomics platform such as Galaxy in another.
-\rs{cite Guzdial on difficulties switching languages} \aw{so I think that Guzdial post is just a synthesis - I found the original article he was quoting from (it's a thesis). Feel free to correct if I'm wrong, though.} \rs{could be - I don't remember details just that he's discussed issues of transitioning languages and I thought that's a worthwhile point to mention}. Furthermore, switching languages and platforms (i.e.\ learning a new skill set)
+%\rs{cite Guzdial on difficulties switching languages} \aw{so I think that Guzdial post is just a synthesis - I found the original article he was quoting from (it's a thesis). Feel free to correct if I'm wrong, though.} \rs{could be - I don't remember details just that he's discussed issues of transitioning languages and I thought that's a worthwhile point to mention}. 
+Furthermore, switching languages and platforms (i.e.\ learning a new skill set)
 can detract from time spent on other educational activities when the goal is not to explicitly teach the language or platform.
 
 Every choice of computing platform comes with costs and benefits. 
@@ -118,13 +125,14 @@ In particular, taking into account \textit{consistency}, \textit{current status 
 \textit{Consistency} refers to consistency of the language's use throughout the curriculum.
 Prior research \cite{wu1990} indicates that switching languages can be associated with learning loss in novices.
 Therefore, in order to deepen and strengthen learners' command of languages, integrating the same language consistently throughout the curriculum may be helpful.
-For example, if an instructor is integrating a computational component into a genetics lab, they might check with someone teaching biostatistics or bioinformatics to see what language they are using.
+For example, if an instructor is integrating a computational component into a genetics lab, they might check with a colleague teaching biostatistics or bioinformatics to see what language they are using.
 
 
 The \textit{current status of research tools} is also worth considering. 
 If the goal of a course is for learners to understand both biology and computation, the instructor will want to choose a language with active development of tools for research in that field.
 For example, many genomic and phylogenetic tools are written in Python. 
 On the other hand, more ecological and comparative biology tools are written in R.
+%\rs{There are how-tos for both}
 Therefore, the choice of language will inform the subset of tools available to the instructor and the learners.
 Finally, instructors should consider their own \textit{comfort}. 
 Teaching requires fluent and comfortable discussion of concepts and tools.
@@ -139,7 +147,7 @@ If the goal of a course is to demonstrate answering a particular question, but n
 Teaching with these resources, however, is beyond the scope of this article.
 
 
-\rs{Why R, python, bash; what about genomics/web tools eg Galaxy}
+%\rs{Why R, python, bash; what about genomics/web tools eg Galaxy}
 %\aw{I'm debating with myself about what I think should go in a section like this. To some extent, these tools are here because there languages have caught on really well. The tools have caught on because of the type of teaching they enable. You conceptually can teach C and C++ in a Jupyter notebook - but I don't know anyone who does. Perhaps we could have this section address the scope of the review. Maybe}
 
 %\aw{I think whatever we want to do, we want to keep fairly brief}
@@ -147,14 +155,35 @@ Teaching with these resources, however, is beyond the scope of this article.
 %\aw{I went ahead and integrated the `scope' stuff into the intro. It's a more effective closing paragraph than what was there. I changed this section header to `Choice of computing language', which might frame things more effectively - not so much what language is `best', but which supports the learning goals of the instructor?} \rs{sounds good}
 
 
-\rs{given this section move some stuff about R from the RStudio Server section}
+The R language allows inexperienced learners to immediately work with rectangular (i.e.\ spreadsheet-style) data in a way that is engaging. For example, a learner can load data and plot results within an hour of first opening RStudio. This engagement is important for learners who are more interested in working with data effectively than learning to code. We suggest that the R language immediately supports coding-to-learn with minimal learning-to-code \citep{}.
+%\sarah{Perhaps 'biological data' would be better than 'rectangular data'?}
+%\rs{I support rectangular data, as biological data comes in a lot of different forms (eg genomic sequences); however, this should definitely be defined more clearly - can be described as something that looks like a spreadsheet}
+\aw{What if we called it "spreadsheet data (often referred to as `rectangular data'"?}
+\rs{whatever seems clear}
+\rs{R might fit better if students take stats}
+\rs{tidyverse has enabled ease of use, and can even be used for accessing databases easily}
+
+Python is a widely-used general purpose programming language.
+Python is widely used in a variety of industries (https://stackoverflow.blog/2017/09/06/incredible-growth-python/).
+Python can be adapted to many purposes. 
+For example, the popular data science library Pandas (cite pandas), can be used for teaching foundational data skills.
+Python also has a variety of resources for teaching work with non-spreadsheet data.
+BioPython is a library for working with general sequence datasets at a variety of scales. 
+More specialized libraries, such as Poretools (for Nanopore data) or Dendropy (for phylogenetic trees) are also available for work in subdisciplines of biology and bioinformatics.
+
+Depending on the aims of the class, it may be necessary to choose a supporting language, as well.
+For example, in contrast to a code to learn course in which biology students practice drawing conclusions from data, a course on genomics might require students to interact with large datasets on a remote server.
+Many such servers require a UNIX command line to access.
+While this review will focus on R and Python, some instructors may find that they need additional languages to support student learning, particularly in advanced disciplines.
+
+
+\rs{I find this section helpful}
 
 {\begin{framed}
-Case Study call out box! 
+\textbf{\centerline{Case Study call out box! }}
+\rs{need a different color for case studies}
 \begin{snugshade*}
-\begin{lstlisting}
-   Example of how R can be used in intro bio for data analysis. Immediate plotting: what R does that Excel doesn't. Choice of R for rectangular data. Scaffolding. Tutorials. Support outside class.
-\end{lstlisting}
+Example of how R can be used in intro bio for data analysis. Immediate plotting: what R does that Excel doesn't. Choice of R for rectangular data. Scaffolding. Tutorials. Support outside class.
 \end{snugshade*}
 \end{framed}}
 
@@ -167,9 +196,10 @@ Local installs may work best in small classes that focus on
 %the basics of 
 coding, where the goal is to have 
 %for students with no prior experience. 
-%\rs{I'd agree with small classes, but for students with no prior experience I typically aim to avoid having them install anything as it's challenging}\aw{Perhaps 
-students who leave the course self-sufficient to do computational work.
-\rs{Do we want to recommend installing Anaconda, Jupyter, R, RStudio, etc. and explain how these enable package mangement?}
+%\rs{I'd agree with small classes, but for students with no prior experience I typically aim to avoid having them install anything as it's challenging}
+\aw{Perhaps 
+students who leave the course self-sufficient to do computational work.}
+\rs{recommend installing Anaconda, Jupyter, R, RStudio, etc. and explain how these enable package mangement}
 
 \subsubsection{Advantages of local installs}
 
@@ -192,7 +222,7 @@ In classes that have students do analytical work requiring substantial computati
 
 \subsection{Single-board computers (SBCs)}\label{sbc}
 
-\rs{I feel like we could be up front about suggesting this as an amazing tool for more advanced computational biology with limitations at the intro level. I do wonder how much you could do with these as sensors in the field without teaching advanced computing skills for more integration of data in the classroom, but I feel like that's a tangent.}
+%\rs{I feel like we could be up front about suggesting this as an amazing tool for more advanced computational biology with limitations at the intro level. I do wonder how much you could do with these as sensors in the field without teaching advanced computing skills for more integration of data in the classroom, but I feel like that's a tangent.}
 
 Single-board computers (SBCs) are minimalist complete computers built on a
 singe circuit board.
@@ -272,20 +302,12 @@ discussed in this paper.
 
 
 {\begin{framed}
-Diversity and Inclusion call out box! 
+\textbf{\centerline{Diversity and Inclusion call out box!}}
 \begin{snugshade*}
-\begin{lstlisting}
-    The low cost of high-performance, single-board computers can make the
-    classroom more equitable.
-    With a cost as low as \$10 per computer, it requires minimal investment from
-    students, or, more ideally, increases the likelihood that an institution or
-    funding agency can cover this cost.
-    Using SBCs also ensures that all students experience the same
-    computing environment and capabilities.
-    Furthermore, the low cost can allow the students to keep the computer
-    after the course is over.
-    This can enable life-long learners across all socioeconomic backgrounds.
-\end{lstlisting}
+%\rs{can someone fix the indentation? Also, is there a way to make the box title look like a title?}
+%\aw{how about this format?}
+The low cost of high-performance, single-board computers (SBCs) can make the
+classroom more equitable. With a cost as low as \$10 per computer, it requires minimal investment from students, or, more ideally, increases the likelihood that an institution or funding agency can cover this cost. Using SBCs also ensures that all students experience the same computing environment and capabilities. Furthermore, the low cost can allow the students to keep the computer after the course is over. This can enable life-long learners across all socioeconomic backgrounds.
 \end{snugshade*}
 \end{framed}}
 
@@ -326,7 +348,7 @@ keyboards, mice, and monitor.
 
 A number of platforms for serving course materials via the internet have become available. 
 Since these technologies share many similarities, we will first discuss these computing platforms generally,
-then discuss teaching with R and Python.
+then discuss teaching with R and Python in the cloud.
 
 
 \subsection{Advantages of Cloud-Based computing platforms}\label{subsub:cloud-advantage}
@@ -386,9 +408,7 @@ Additionally, they do not have or know how to install supporting packages.
 
 %\begin{itemize}
 %\item When should you choose to use RStudio Server?
-The R language allows inexperienced learners to immediately work with rectangular (i.e.\ spreadsheet-style) data in a way that is engaging. For example, a learner can load data and plot results within an hour of first opening RStudio. This engagement is important for learners who are more interested in working with data effectively than learning to code. We suggest that the R language immediately supports coding-to-learn with minimal learning-to-code \citep{}.
-%\sarah{Perhaps 'biological data' would be better than 'rectangular data'?}
-%\rs{I support rectangular data, as biological data comes in a lot of different forms (eg genomic sequences); however, this should definitely be defined more clearly - can be described as something that looks like a spreadsheet}
+
 
 RStudio Server provides a web interface to a centralized version of the RStudio IDE for working with R code. By using RStudio students are able to simultaneously view their script, environment variables, file structure, plots, installed packages, etc. The Server format allows the administrator to maintain a consistent version of R, RStudio, and installed packages. This approach allows beginning coders to focus on data and results, rather than worrying about installation and versions. It allows an instructor to be sure that students can focus on their code without being limited by their hardware or software.
 \rs{some of this might be redundant with the general description of the servers above} \aw{I think the repetition is light enough that it works - we're targeting an audience that might not be familiar with any one of these technologies}
@@ -397,27 +417,19 @@ RStudio also has a command line built in, so the server can be a great way to te
 \rs{should probably expand or clarify this in some way}
 \rs{add level of detail to match Jupyter}
 \aw{Perhaps something about integrated revision management? It's a very painless way to learn intermediate skills like versioning.}
+\rs{I wasn't going to get into version control - it seemed like too much - what do you think}
+\aw{I don't think it matters much. I was thinking I might throw in a line under Jupyter to note that a fully-functional terminal emulator allows for incorporating the kind of "high novice" skills like revision management}
 
-%\item What are the pros?
-%\begin{itemize}
+
 Some advantages of RStudio Server is that students data and code is stored (and backed up) on the server. 
 Instructors can also access a student's code from anywhere to help students solve problems remotely.
 RStudio Server is free for teaching purposes.
-%\end{itemize}
-%\item What are the cons?
-%\begin{itemize}
-%\item Using a server may require support from IT.
-%\end{itemize}
-%\item Do you require IT support to do this?
 Additionally, for smaller scale teaching an instructor may use RStudio Cloud, which provides a free ready-to-go web-based version of RStudio.
-%\end{itemize}
 
 {\begin{framed}
-Diversity and Inclusion call out box! 
+\textbf{\centerline{Diversity and Inclusion call out box!}} 
 \begin{snugshade*}
-\begin{lstlisting}
 A local RStudio Server or JupyterHub reduces barriers to the use of R or Python and support underprivileged students by removing the requirement to have a laptop (a Chromebook or tablet is sufficient) and minimizes the frustration associated with installation and different operating systems. Students can access the server from any location via a web browser using any machine while experiencing a consistent interface and access to their code and data. 
-\end{lstlisting}
 \end{snugshade*}
 \end{framed}}
 
@@ -459,11 +471,9 @@ In sum, this is a flexible tool, and one that allows an instructor to scale thei
 
 
 {\begin{framed}
-Diversity and Inclusion call out box! 
+\textbf{\centerline{Diversity and Inclusion call out box!}} 
 \begin{snugshade*}
-\begin{lstlisting}
 Server-based computing platforms allow learners to access course materials via the web. The actual computations performed via a JupyterHub or RStudio Server are carried out on a remote machine. This can level the playing field for students who may need to access their coursework on multiple computers (such as students relying on computer lab or library access to machines) and students who have old machines or other limitations such as Chromebooks.
-\end{lstlisting}
 \end{snugshade*}
 \end{framed}}
 
@@ -526,11 +536,9 @@ Being oriented towards education, some of these providers also offer accounts fo
 {\begin{framed}
 Diversity and Inclusion call out box! 
 \begin{snugshade*}
-\begin{lstlisting}
 Cultural issues surrounding asking for help.
 Asking for help is critical for students to be able to overcome confusion, solidify their skills, and deepen their knowledge and understanding. However, cultural differences exist that may prevent students from seeking help, even when they need it most. 
 \sarah{I need to add information from some readings}
-\end{lstlisting}
 \end{snugshade*}
 \end{framed}}
 
@@ -637,8 +645,8 @@ An important component is providing learners with a solution set after they have
 %\sarah{Great point! I've added it to the text.}
 
 \subsection{Focusing on coding as problem-solving}
-\rs{this seems tangential to computing platforms/computing platforms and even to teaching students how to code - as much as I appreciate the ideas in here I don't think they fit in this paper}
-\sarah{That's fair -- this bit came from a small comment from Brian O'Meara during iEvoBio and does not necessarily belong in the paper. It could also be condensed and added under "other challenges and tools" below}
+%\rs{this seems tangential to computing platforms/computing platforms and even to teaching students how to code - as much as I appreciate the ideas in here I don't think they fit in this paper}
+%\sarah{That's fair -- this bit came from a small comment from Brian O'Meara during iEvoBio and does not necessarily belong in the paper. It could also be condensed and added under "other challenges and tools" below}
 \rs{I think I'm good with leaving it in now given changes to the overall paper, and I added a couple of sentences. It might be more motivational and go earlier in the paper rather than here in teaching methods.}
 
 One of the main skills underlying learning to code is learning how to solve problems. 
@@ -654,7 +662,7 @@ A better approach is to use a formalized pseudocode, where the meaning behind ea
 \rs{not sure about these last two sentences}
 
 \subsection{Cooperative Learning} 
-\sarah{I re-named this from pair-based learning to cooperative learning to include group work}
+%\sarah{I re-named this from pair-based learning to cooperative learning to include group work}
 \sarah{One of these examples comes from iEvoBio and the other is from one of my colleagues.
 If anyone has examples from their teaching they want to highlight/add, please do so!}
 
