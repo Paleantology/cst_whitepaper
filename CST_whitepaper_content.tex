@@ -14,24 +14,25 @@
 
 \begin{itemize}
 \item [\textbf{TODO}]
-    \item \aw{I cleared out some of the edit marks so it is a little easier to see. I was feeling a bit distracted by them in some places, especially where the text is a little more final. I did a commit right before, so all the comments are preserved.}
-
-    %\item \rs{Make sure article is framed around new title}
+    \item \rs{Make sure article is framed around new title}
     %\item Citations in the introduction \sarah{I added a bib file with the references I cited in section 5, others should feel free to add to it}
     \item \rs{where is this being submitted? PeerJ?} \cn{PeerJ sounds good to me... Are there funds available for the OA pub fee?} \rs{I can put in a significant part. I was wondering if anyone knows where this fits best - it's not research, not quite review, a bit like the 10 Simple Rules papers but those all seem to be in PLoS Comp Bio, which is narrower} \aw{I'm open for discussion on this! I like PeerJ, just because its free to read without being super high cost for us, but realistically, I have a big chunk of money I can use for this, and iEvoBio can kick in some, too.}\cn{Chiming in to say I don't have strong feelings about venue... it's also not an important factor for my PandT committee.}
-    \rs{I am good publishing whereever - I was wondering who accepts this sort of article. Might look at F1000 research as well, or a teaching journal eg The American Biology Teacher} \aw{I'd be really interested in F1000, since the model is kind of cool, but it looks like they don't do review. I can send an inquiry, though}
+    \rs{I am good publishing whereever - I was wondering who accepts this sort of article. Might look at F1000 research as well, or a teaching journal eg The American Biology Teacher} \aw{I'd be really interested in F1000, since the model is kind of cool, but it looks like they don't do review. I can send an inquiry, though} \rs{They peer review https://f1000research.com/for-authors/tips-for-finding-referees#prp} \aw{Sorry, that was a typo. I don't think they publish review\texit{s}. But I'm wrong on that: https://f1000research.com/for-authors/article-guidelines I'd be happy to send a pre-sub inquiry}
     
     \item \aw{Student --> learner}
     %\item Maybe add an equity and inclusion call-out box on cultural issues surrounding asking for help -- what do others think of this idea? \sarah{I can start this on 8/28} \aw{This is a really nice idea!} \rs{my colleague Bryan, who studies inclusive education, says this is a good point - he suggested looking at John Henryism, Treisman 1992, and part 2 of https://www.thisamericanlife.org/550/transcript} \sarah{great suggestions!}
     \item \rs{thoughts on consistency and scaffolding of computing platforms}
-    %\item \rs{wondering if we should discuss languages up front as it's kind of key and gets discussed in terms of using RStudio/Jupyter but that's not exactly logical} \aw{This is an interesting point - a lot of biologists learn and use bash, but we don't even mention it other than obliquely} \rs{I was just about to say we need to include bash, especially as that ties in to Raspberry Pi and/or genomics} \rs{maybe before platforms talk about languages} \aw{Discussion welcome from everyone on this point! I like the idea that }
     \item \rs{thinking we could use some details - maybe boxes of summarized case studies; also suggestions of where instructors get data and/or lesson plans eg QUBES} \aw{I really like this idea!} 
 \end{itemize}
 
 
 \section{Abstract}\label{sect:Abstract}
 
-Stuff about computing.
+Many biologists find themselves teaching computing skills to  learners despite not being formally trained in computing skills themselves. 
+Recent years have seen an explosion of new technologies to assist in delivering course content to learners.
+Educational research is also always providing new insights into how learners absorb and process information.
+In this review, we discuss strategies for approaching teaching foundational computing skills to a biologist audience, and review literature on teaching practices to support development of these skills.
+We pay special attention to meeting the needs of a diverse student body, and how different ways of delivering course content can be leveraged to make a more inclusive classroom experience.
 
 \bigskip
 
@@ -39,7 +40,7 @@ Stuff about computing.
 \bigskip
 \section{Introduction}\label{sect:Introduction}
 
-\rs{Lots of good refs in Madlung 2018. Also, perhaps someone can smooth out the writing of the intro - I think most of the content is there but it's a little choppy.}
+%\rs{Lots of good refs in Madlung 2018. Also, perhaps someone can smooth out the writing of the intro - I think most of the content is there but it's a little choppy.}
 
 Biology departments are increasingly offering or considering course work incorporating hands-on computation
 \citep{WilsonSayres18}. 
@@ -158,18 +159,19 @@ Teaching with these resources, however, is beyond the scope of this article.
 The R language allows inexperienced learners to immediately work with rectangular (i.e.\ spreadsheet-style) data in a way that is engaging. For example, a learner can load data and plot results within an hour of first opening RStudio. This engagement is important for learners who are more interested in working with data effectively than learning to code. We suggest that the R language immediately supports coding-to-learn with minimal learning-to-code \citep{}.
 %\sarah{Perhaps 'biological data' would be better than 'rectangular data'?}
 %\rs{I support rectangular data, as biological data comes in a lot of different forms (eg genomic sequences); however, this should definitely be defined more clearly - can be described as something that looks like a spreadsheet}
-\aw{What if we called it "spreadsheet data (often referred to as `rectangular data'"?}
-\rs{whatever seems clear}
-\rs{R might fit better if students take stats}
-\rs{tidyverse has enabled ease of use, and can even be used for accessing databases easily}
+%\aw{What if we called it "spreadsheet data (often referred to as %`rectangular data'"?}
+%\rs{whatever seems clear}
+%\rs{R might fit better if students take stats}
+%\rs{tidyverse has enabled ease of use, and can even be used for accessing databases easily}
 
 Python is a widely-used general purpose programming language.
-Python is widely used in a variety of industries (https://stackoverflow.blog/2017/09/06/incredible-growth-python/).
+Python is widely used in a variety of industries %(https://stackoverflow.blog/2017/09/06/incredible-growth-python/).
 Python can be adapted to many purposes. 
 For example, the popular data science library Pandas (cite pandas), can be used for teaching foundational data skills.
 Python also has a variety of resources for teaching work with non-spreadsheet data.
 BioPython is a library for working with general sequence datasets at a variety of scales. 
-More specialized libraries, such as Poretools (for Nanopore data) or Dendropy (for phylogenetic trees) are also available for work in subdisciplines of biology and bioinformatics.
+More specialized libraries, such as Poretools (for Nanopore data) or Dendropy and ETE3 (for phylogenetic trees; citep{}) are also available for work in subdisciplines of biology and bioinformatics.
+%\rs{also Biopython}
 
 Depending on the aims of the class, it may be necessary to choose a supporting language, as well.
 For example, in contrast to a code to learn course in which biology students practice drawing conclusions from data, a course on genomics might require students to interact with large datasets on a remote server.
@@ -177,7 +179,7 @@ Many such servers require a UNIX command line to access.
 While this review will focus on R and Python, some instructors may find that they need additional languages to support student learning, particularly in advanced disciplines.
 
 
-\rs{I find this section helpful}
+%%\rs{I find this section helpful}
 
 {\begin{framed}
 \textbf{\centerline{Case Study call out box! }}
@@ -195,11 +197,12 @@ Perhaps the most basic computing platform setup is to have students install lang
 Local installs may work best in small classes that focus on 
 %the basics of 
 coding, where the goal is to have 
+\sarah{This sentence has been fragmented}
 %for students with no prior experience. 
 %\rs{I'd agree with small classes, but for students with no prior experience I typically aim to avoid having them install anything as it's challenging}
-\aw{Perhaps 
-students who leave the course self-sufficient to do computational work.}
-\rs{recommend installing Anaconda, Jupyter, R, RStudio, etc. and explain how these enable package mangement}
+%\aw{Perhaps 
+%students who leave the course self-sufficient to do computational work.}
+%\rs{recommend installing Anaconda, Jupyter, R, RStudio, etc. and explain how these enable package mangement}
 
 \subsubsection{Advantages of local installs}
 
@@ -208,7 +211,7 @@ Local installs allow students to immediately be able to apply their new knowledg
 
 If the software used in class does not require a paid license or subscription, students will continue to have access to the specific tools used in class after the course ends. Teaching students with tools that they know they will be able to take away with them and apply in the future increases student motivation to learn these tools and increases the chance that they will actually use them in future work.
 
-Local installs are a solution in particular for smaller institutions that do not have access to remote computing platform. In some cases, though setting up a computing platform may be theoretically possible, it may not be feasible within the constraints of resources, time, and IT personnel. Local installs offer an alternative system that does not typically require extensive coordination with IT personnel at an institution.
+Local installs are a solution in particular for smaller institutions that do not have access to remote computing platforms. In some cases, though setting up a computing platform may be theoretically possible, it may not be feasible within the constraints of resources, time, and IT personnel. Local installs offer an alternative system that does not typically require extensive coordination with IT personnel at an institution.
 
 \subsubsection{Overcoming the challenges of of local installs?} 
 
@@ -429,6 +432,7 @@ Additionally, for smaller scale teaching an instructor may use RStudio Cloud, wh
 {\begin{framed}
 \textbf{\centerline{Diversity and Inclusion call out box!}} 
 \begin{snugshade*}
+\sarah{This box is almost the same as the next box -- perhaps we should merge the two or delete one?}
 A local RStudio Server or JupyterHub reduces barriers to the use of R or Python and support underprivileged students by removing the requirement to have a laptop (a Chromebook or tablet is sufficient) and minimizes the frustration associated with installation and different operating systems. Students can access the server from any location via a web browser using any machine while experiencing a consistent interface and access to their code and data. 
 \end{snugshade*}
 \end{framed}}
@@ -473,6 +477,7 @@ In sum, this is a flexible tool, and one that allows an instructor to scale thei
 {\begin{framed}
 \textbf{\centerline{Diversity and Inclusion call out box!}} 
 \begin{snugshade*}
+\sarah{As I noted above, this box is almost the same as the previous box -- perhaps we should merge the two or delete one?}
 Server-based computing platforms allow learners to access course materials via the web. The actual computations performed via a JupyterHub or RStudio Server are carried out on a remote machine. This can level the playing field for students who may need to access their coursework on multiple computers (such as students relying on computer lab or library access to machines) and students who have old machines or other limitations such as Chromebooks.
 \end{snugshade*}
 \end{framed}}
@@ -489,8 +494,9 @@ While there is a text editor for preparing scripts, and a command line to run sc
 
 
 \subsubsection{HPC and Cloud}\label{HPC}
-\rs{maybe move this section up to where you discuss servers generally as you have some cloud stuff up there}
-\aw{I was thinking kind of the same thing ... I like the idea of this content coming after the descriptions of the platforms because it's sort of the nuts-and-bolts. But I also agree that there are earlier points where it could make sense. I might print out the MS both ways and see}
+\sarah{I think we should make this a subsection not a subsubsection}
+%\rs{maybe move this section up to where you discuss servers generally as you have some cloud stuff up there}
+%\aw{I was thinking kind of the same thing ... I like the idea of this content coming after the descriptions of the platforms because it's sort of the nuts-and-bolts. But I also agree that there are earlier points where it could make sense. I might print out the MS both ways and see}
 
 RStudio Server and JupyterHub will typically require that instances are \textit{hosted} somewhere.
 This refers to having the compute platform installed in a central location, at which it can be accessed by all students.
@@ -534,11 +540,13 @@ Being oriented towards education, some of these providers also offer accounts fo
 
 
 {\begin{framed}
-Diversity and Inclusion call out box! 
+\textbf{\centerline{Diversity and Inclusion call out box!}} 
 \begin{snugshade*}
 Cultural issues surrounding asking for help.
-Asking for help is critical for students to be able to overcome confusion, solidify their skills, and deepen their knowledge and understanding. However, cultural differences exist that may prevent students from seeking help, even when they need it most. 
-\sarah{I need to add information from some readings}
+Asking for help is critical for learners to be able to overcome confusion, solidify their skills, and deepen their knowledge and understanding. 
+However, cultural differences exist that may prevent learners from seeking help, even when they need it most. 
+Universities in particular have the unspoken expectation that undergraduates will seek help when they need it, but people from lower-income backgrounds will not necessarily know this or may feel uncomfortable approaching their teachers, who are in positions of authority \citep{jack2016no}.
+
 \end{snugshade*}
 \end{framed}}
 
@@ -579,18 +587,18 @@ students run analyses on their own computer.
 %above commented out as this seems to be taken care of
 
 Designing an effective biology course that incorporates computing requires more than choosing the best computing platform for your needs. Skills-based courses such as coding necessitate a unique approach to teaching that can differ in some ways from more commonly used pedagogy in content-based courses. 
-For many students, a biology course that involves hands-on computing may be their first classroom experience that heavily involves learning increasingly complex skills that build off of each other, rather than primarily learning content. And similarly, instructors whose research and teaching expertise is in a field that is not strictly computational -- which likely includes most instructors of biology -- may benefit from guidance on best practices for delivering content effectively and addressing the unique challenges that arise. As a skills-based discipline, computation 
+For many learners, a biology course that involves hands-on computing may be their first classroom experience that heavily involves learning increasingly complex skills that build off of each other, rather than primarily learning content. And similarly, instructors whose research and teaching expertise is in a field that is not strictly computational -- which likely includes most instructors of biology -- may benefit from guidance on best practices for delivering content effectively and addressing the unique challenges that arise. As a skills-based discipline, computation 
 %\rs{I would avoid a narrow focus on comp bio and broaden to allow any course with computing such as data analysis} \cn{Agreed - I changed "computational biology" to "computation"(is that considered a discipline, or should we change that wording?)} 
-necessarily requires some level of active in-class interaction from students (with the instructor or peers, or with the material itself). Thoughtful implementation of appropriate active learning strategies has been shown to increase both mastery of content and development of general skills such as critical thinking and collaboration \citep{faust_paulson_1998}. Below, we describe several strategies for teaching coding and address challenges that instructors may face in teaching a course that is perhaps more similar methodologically to math and foreign language than to other biology courses.
+necessarily requires some level of active in-class interaction from learners (with the instructor or peers, or with the material itself). Thoughtful implementation of appropriate active learning strategies has been shown to increase both mastery of content and development of general skills such as critical thinking and collaboration \citep{faust_paulson_1998}. Below, we describe several strategies for teaching coding and address challenges that instructors may face in teaching a course that is perhaps more similar methodologically to math and foreign language than to other biology courses.
 
 \subsection{Example-Based Learning}
 
 Example-based learning has a long history in teaching coding, and consists of the instructor providing examples of how to solve a given problem using code.
 Sometimes, these examples are static and provided in a textbook or on slides. 
-Other forms of example-based learning requires the students to actively engage with the code. 
+Other forms of example-based learning require the learners to actively engage with the code. 
 An especially effective way to teach computational biology is to combine multiple forms of example-based learning \citep{renkl_learning_2014}.
 For example, an instructor might use all three methods detailed below:
-first show students some written examples, perhaps in pre-reading for a class, then use live coding during class and have the students follow along, and subsequently have students complete a series of examples with increasing amounts of code that students need to fill in during in-class problem sets or in homework assignments.
+first show learners some written examples, perhaps in pre-reading for a class, then use live coding during class and have the learners follow along, and subsequently have learners complete a series of examples with increasing amounts of code that learners need to fill in during in-class problem sets or in homework assignments.
 %\sarah{I rewrote the text about the cognitive apprenticeship to better convey the point.} \rs{I agree}
 %Using all three of the methods detailed in this section follows the `cognitive apprenticeship' model of teaching, in which students first observe the way their instructor solves a problem (written examples), then follow along with the instructor to scaffold how to arrive the solution themselves (live coding) \rs{this isn't how I think of live-coding, which would be following along with the instructor}, and ultimately having the instructor fade into the background to allow learners to arrive at the solution on their own (faded examples) \rs{faded examples are a bit more like fill in the blank and not to do with the instructor fading out - this is more independent problem solving but more supported than starting from scratch} (Raj et al. 2018). 
 
@@ -599,28 +607,28 @@ first show students some written examples, perhaps in pre-reading for a class, t
 \subsubsection{Written examples}
 
 Written examples are often a good starting point to introduce learners to the concepts and structure of solutions.
-Written tutorials allow students to go at their own pace.
-This ensures students take the time they need.
+Written tutorials allow learners to go at their own pace.
+This ensures learners take the time they need.
 However, learners frequently skim over static written examples, confident that they understand what the code is doing, without critically evaluating the code or skipping formative assessment questions, thus not truly ensuring their understanding.
 For this reason, written examples are most effective when integrated with other example-based learning methods \citep{renkl_learning_2014}.
 
 
 \subsubsection{Live coding}\label{Livecoding}
 
-Live coding is a form of example-based learning in which learners watch the instructor solve problems and the learners follow along. 
-In most cases, learners are expected to code along with the instructors. 
+Live coding is a form of example-based learning in which learners watch the instructor solve problems and in most cases the learners follow along. 
 The act of typing along forces learners to actively enter code, which is a hands-on version of a worked example.
-This means the instructor goes at a reasonable pace that learners can follow.
-The instructor can stop and ask students challenge questions as formative assessment to ensure that students apply their knowledge immediately and question their own understanding. 
-The instructor can also set up a problem, and pause to have students figure out the rest of the exercise. 
+This means the instructor must proceed at a reasonable pace that learners can follow.
+The instructor can stop and ask learners challenge questions as formative assessment to ensure that learners apply their knowledge immediately and question their own understanding. 
+The instructor can also set up a problem, and pause to have learners figure out the rest of the exercise. 
 This live coding approach has been popularized by Data Carpentry and similar coding workshops.
 Live coding can help teach aspects of programming that are not easily taught by viewing static code, such as incremental coding (writing a few lines and testing them) and debugging. 
-From the perspective of the learners, live coding is generally preferable to viewing static code, especially when students are able to code along with instructors \citep{raj_role_2018}.
+From the perspective of the learners, live coding is generally preferable to viewing static code, especially when learners are able to code along with instructors \citep{raj_role_2018}.
 
 
 Disadvantages of live coding include that everyone goes at the same pace.
 This may be too fast for some and too slow for others.
-One possibility to alleviate these disadvantages is to flip the classroom and provide students with pre-recorded live-coding experiences, and then students come to class where they complete an exercise or a series of faded examples. 
+One possibility to alleviate these disadvantages is to flip the classroom and provide learners with pre-recorded live-coding experiences.
+The learners then come to class where they complete an exercise or a series of faded examples. 
 
 
 \subsubsection{Faded examples}\label{Fillable} 
@@ -635,11 +643,11 @@ With each subsequent example, key problem solving steps are removed and learners
 Faded examples have been demonstrated to require less learning time with potentially better learning outcomes \citep{schwonke_worked-example_2009}. 
 
 In the context of teaching computation to biologists, faded examples are particularly facilitated by servers.
-For example, a Jupyter notebook containing faded examples may be made available to students on the server.
-If students successfully complete the code they will produce an expected outcome, thus allowing for the student to self-correct their work.
+For example, a Jupyter notebook containing faded examples may be made available to learners on the server.
+If learners successfully complete the code they will produce an expected outcome, thus allowing for the learner to self-correct their work.
 Fillable Jupyter notebooks using the faded examples technique force learners to engage with the material and actively problem-solve. 
-Fillable notebooks are particularly useful because they run the code and allow the student to immediately discover if they produced the right answer. 
-This type of immediate feedback allows the student to work towards the correct answer, rather than turning in work that they believe to be correct and receiving a low grade on something they put time and effort into.
+Fillable notebooks are particularly useful because they run the code and allow the learner to immediately discover if they produced the right answer. 
+This type of immediate feedback allows the learner to work towards the correct answer, rather than turning in work that they believe to be correct and receiving a low grade on something they put time and effort into.
 An important component is providing learners with a solution set after they have had the opportunity to solve the faded examples so that they can see where they went wrong if they are unsuccessful.
 %\rs{the cool thing about faded examples in coding (compared to math) is that if it runs and produces the right answer then the student knows they did it right - it's self-correcting rather than teacher-corrected and the student can work toward the correct answer rather than think they got it right and then get a bad grade}
 %\sarah{Great point! I've added it to the text.}
@@ -647,7 +655,7 @@ An important component is providing learners with a solution set after they have
 \subsection{Focusing on coding as problem-solving}
 %\rs{this seems tangential to computing platforms/computing platforms and even to teaching students how to code - as much as I appreciate the ideas in here I don't think they fit in this paper}
 %\sarah{That's fair -- this bit came from a small comment from Brian O'Meara during iEvoBio and does not necessarily belong in the paper. It could also be condensed and added under "other challenges and tools" below}
-\rs{I think I'm good with leaving it in now given changes to the overall paper, and I added a couple of sentences. It might be more motivational and go earlier in the paper rather than here in teaching methods.}
+%\rs{I think I'm good with leaving it in now given changes to the overall paper, and I added a couple of sentences. It might be more motivational and go earlier in the paper rather than here in teaching methods.}
 
 One of the main skills underlying learning to code is learning how to solve problems. 
 Writing code can be viewed as a method of communicating to the computer the precise steps of the analysis.
@@ -657,29 +665,32 @@ When the learning outcomes are not necessarily tied to learners having full mast
 This method, called pseudocode, can help learners logically scaffold their thought process, and therefore their code, regardless of which language they will be coding in.
 Learners can be required to write the solution to their problem in pseudocode to demonstrate their thought process, and then use that pseudocode to write their code \citep[e.g.,][]{olsen_using_2005}.
 Courses may rely on pseudocode during timed exams to relieve exam stress.
-Note, however, that pseudocode written by different examiners may differ in its adherence to unwritten language rules, and thus could cause confusion among learners \citep{cutts_code_2014}. 
-A better approach is to use a formalized pseudocode, where the meaning behind each word is clearly and unambiguously defined \citep{cutts_code_2014}.
+Note, however, that if learners are expected to interpret or elaborate on pseudocode -- especially in an exam setting -- that the 
+%that pseudocode written by different examiners may differ in its adherence to unwritten language rules, and thus could cause confusion among learners \citep{cutts_code_2014}. 
+%A better approach is to use a formalized pseudocode, where the 
+meaning behind each pseudocode term is clearly and unambiguously defined \citep{cutts_code_2014}.
 \rs{not sure about these last two sentences}
+\sarah{I rephrased the last two sentences. Are they any better now?}
 
 \subsection{Cooperative Learning} 
 %\sarah{I re-named this from pair-based learning to cooperative learning to include group work}
-\sarah{One of these examples comes from iEvoBio and the other is from one of my colleagues.
-If anyone has examples from their teaching they want to highlight/add, please do so!}
+%\sarah{One of these examples comes from iEvoBio and the other is from one of my colleagues.
+%If anyone has examples from their teaching they want to highlight/add, please do so!}
 
-Working in groups or pairs (called `cooperative learning'), can result in numerous positive outcomes in the biological sciences, including enhancing scientific thinking and attitudes about biology, aiding in the instruction and evaluation of course material, providing a better understanding of practical skills and their applicability in real-world environments, improving reading, writing, and social skills, and supporting learning for a broader array of students \citep[reviewed in][]{lord_101_2001}. \rs{could also cite Treisman here}
+Working in groups or pairs (called `cooperative learning'), can result in numerous positive outcomes in the biological sciences, including enhancing scientific thinking and attitudes about biology, aiding in the instruction and evaluation of course material, providing a better understanding of practical skills and their applicability in real-world environments, improving reading, writing, and social skills, and supporting learning for a broader array of learners \citep[reviewed in][]{lord_101_2001}. \rs{could also cite Treisman here}
 In the context of teaching computational biology, group projects and other forms of cooperative learning have frequently been used to facilitate example-based learning  \citep[e.g.,][]{emery_application_2017,korcsmaros_teaching_2013,fuselier_trace_2011}.
-One creative cooperative learning teaching tool for computational biology is pairing students up and having one student be the `driver', who types in the code, and one be the `navigator', who has to tell the driver what to type. 
-This exercise forces students to think carefully about the process of creating code.
-Even if students are not expected to work through examples or produce a project in pairs or groups, cooperative learning can still be implemented by facilitating discussion and collaboration among students.
-This can be done in class (e.g., through think-pair-share exercises, in which students are encouraged to think about a problem individually, then discuss in pairs or small groups) or outside of class through discussion forums.
-For instance, students could be encouraged or required to participate in discussions on the course website (e.g., Blackboard/Moodle) or a Slack workspace created for the class, or to do peer review of other students' projects. 
-Learning from other students can be a powerful way to get students engaged with the course work, and can solidify their understanding by having them teach each other \citep{treisman1992studying}.
+One creative cooperative learning teaching tool for computational biology is pairing learners up and having one student be the `driver', who types in the code, and one be the `navigator', who has to tell the driver what to type. 
+This exercise forces learners to think carefully about the process of creating code.
+Even if learners are not expected to work through examples or produce a project in pairs or groups, cooperative learning can still be implemented by facilitating discussion and collaboration among learners.
+This can be done in class (e.g., through think-pair-share exercises, in which learners are encouraged to think about a problem individually, then discuss in pairs or small groups) or outside of class through discussion forums.
+For instance, learners could be encouraged or required to participate in discussions on the course website (e.g., Blackboard/Moodle) or a Slack workspace created for the class, or to do peer review of other learners' projects. 
+Learning from each other can be a powerful way to get learners engaged with the course work, and can solidify their understanding by having them teach each other \citep{treisman1992studying}.
 
 However, as most students and instructors know, group work can create problems and strife.
 Interpersonal issues within pairs or groups can hinder the learning process.
 Sometimes groups or pairs are unbalanced with regard to prior knowledge, speed of learning, or effort contributed to the project.
 Additionally, group size or composition can lead to an entire group struggling to succeed \citep[e.g.,][]{compeau_establishing_2019}. 
-\rs{this seems like a whole topic unto itself that probably has a lot of literature - perhaps we can simply refer the reader to that given what you've pointed out here}
+%\rs{this seems like a whole topic unto itself that probably has a lot of literature - perhaps we can simply refer the reader to that given what you've pointed out here}
 
 Therefore, although group projects are frequently used in computational biology and can be a useful tool, relying only on group-based projects for critical assessments in a course may not be the best solution.
 
@@ -690,50 +701,50 @@ Therefore, although group projects are frequently used in computational biology 
 \subsection{Other challenges and tools}
 
 Incorporating computational biology into the classroom comes with additional challenges that may not be present in other biology courses.
-Many students will have some prior biological knowledge but have no experience with computer coding.
-This creates a situation where students have many questions but often feel out of their comfort zone, or are simply uninterested in the computational components of the course material.
-These factors combine result in a number of different challenges for instructors to help students successfully navigate the computational side of a biology course.
+Many learners will have some prior biological knowledge but have no experience with computer coding.
+This creates a situation where learners have many questions but often feel out of their comfort zone, or are simply uninterested in the computational components of the course material.
+These factors combine result in a number of different challenges for instructors to help learners successfully navigate the computational side of a biology course.
 %\rs{perhaps say something about lack of interest here - they come for biology and force them to code, but see below}
 
 \subsubsection{Demonstrating value}
 %\aw{Maybe we want to call this section "Reticence and Computation" or "Demonstrating value" or similar"} 
 %\sarah{I like that suggestion! I've now changed the section title to "Demonstrating value"}
 %RSS: this is definitely how we sell coding to intro bio and I think it helps with buy-in
-The unfamiliarity of coding can sometimes lead the students to push back against the idea of learning to code.
-In our experience, demonstrating how coding can be a useful tool for doing the same analysis multiple times (e.g., generate the same type of plot for different datasets) helps students get on board with learning to code. 
-This demonstration is especially powerful when the students are enabled to discover the utility of coding on their own. 
-For example, an instructor could provide students with a large dataset and encourage the students to try basic analyses (e.g., producing summary statistics or basic plots) in both R and Excel. 
+The unfamiliarity of coding can sometimes lead the learners to push back against the idea of learning to code.
+In our experience, demonstrating how coding can be a useful tool for doing the same analysis multiple times (e.g., generate the same type of plot for different datasets) helps learners see the value in learning to code. 
+This demonstration is especially powerful when the learners are enabled to discover the utility of coding on their own. 
+For example, an instructor could provide students with a large dataset and encourage the learners to try basic analyses (e.g., producing summary statistics or basic plots) in both R and Excel. 
 %\rs{even more than this - self-discovery ie here's a big dataset and discover how much better it is not to do this in excel - is stronger than demonstration}
 %\sarah{This is an excellent point. I've tried to incorporate it above, but feel free to edit}
-Particularly when students have not opted into learning computational skills -- for example, when computational skills are incorporated into introductory biology classrooms -- showing students the value of saving future time and effort is very important. 
+Particularly when learners have not opted into learning computational skills -- for example, when computational skills are incorporated into introductory biology classrooms -- showing learners the value of saving future time and effort is very important. 
 
 
 \subsubsection{Teaching how to ask for help}
 Not all learners will automatically ask for help (see call out box above). 
-As instructors, we need to encourage students to seek our help when they are struggling.
-One method we have found successful is to provide students with rewards for asking for help, such as an automatic extension on deadlines if students attend office hours.
-Having knowledgeable teaching assistants or support staff to go around and check on student progress during in-class exercises is also really helpful.
-Instructing TAs to first approach students who do not have their hands raised will provide help to a larger proportion of the class, especially many learners who need the most help.
-Data Carpentry uses post-it notes to discreetly signal to instructors when students need assistance.
+As instructors, we need to encourage learners to seek our help when they are struggling.
+One method we have found successful is to provide learners with rewards for asking for help, such as an automatic extension on deadlines if learners attend office hours.
+Having knowledgeable teaching assistants or support staff to go around and check on learner progress during in-class exercises is also really helpful.
+Instructing TAs to first approach learners who do not have their hands raised will provide help to a larger proportion of the class, especially many learners who need the most help.
+Data Carpentry uses post-it notes to discreetly signal to instructors when learners need assistance.
 Incorporating live coding into lectures is another way to normalize asking for help; while live coding, instructors can demonstrate that errors are a natural part of coding, how to effectively search for solutions to problems, and how to look up syntax details.
 
 \subsubsection{Large class sizes}
 
 For instructors who are looking to incorporate computational biology into large classes, such as in an introductory biology course, the prospect of testing and grading code turned in as assignments may be daunting. 
-We have found that relying on knowledgeable TAs, support staff, and demonstrators is the best way to ensure that all students receive the help that they need.
-Placing students in pairs or small working groups (see the section on Cooperative Learning above) can also provide students with support and feedback that will facilitate their learning, without placing the entire burden on instructors and TAs.
+We have found that relying on knowledgeable TAs, support staff, and demonstrators is the best way to ensure that all learners receive the help that they need.
+Placing learners in pairs or small working groups (see the section on Cooperative Learning above) can also provide learners with support and feedback that will facilitate their learning, without placing the entire burden on instructors and TAs.
 Additionally, relying on IT support to help manage the computing platforms can reduce the workload for the instructors.
 Furthermore, using assignments that can be automatically graded (e.g., mimir classroom, https://www.mimirhq.com/) will help reduce the time teachers must spend grading.
 
 
 
 \subsubsection{Plagiarism}
-Writing code is more similar to math than to writing, as there is a correct answer (or perhaps several correct answers), and it can be difficult to detect whether students arrived at that answer independently or through copying someone else's solution.
+Writing code is more similar to math than to writing, as there is a correct answer (or perhaps several correct answers), and it can be difficult to detect whether learners arrived at that answer independently or through copying someone else's solution.
 Plagiarism is can be exacerbated by the common phenomenon of searching for solutions to a given problem online and copying or adapting posted solutions without attributing proper credit \citep{gaspar_restoring_2007}. 
-One approach to ensure students understand code is to require commented explanation of each component of their code, and ensure these comments are different for each student.
+One approach to ensure learners understand code is to require commented explanation of each component of their code, and ensure these comments are different for each learner.
 Some of the programs that grade code include plagiarism detection components \citep{pears_survey_2007}, which can help instructors identify when plagiarism has occurred.
 Instructors are encouraged to discuss these issues and reinforce the importance of citing sources.
-Another approach is to allow students to work on assessments as a group, but have each student write out their own pseudocode explanations of the code.
+Another approach is to allow learners to work on assessments as a group, but have each learners write out their own pseudocode explanations of the code.
 In class quizzes may also use faded examples and require comments,
 especially as it is widely accepted that learners should be able to search for the functions
 and arguments to functions that are needed to implement their analytical work.
