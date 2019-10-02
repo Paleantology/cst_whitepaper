@@ -32,10 +32,10 @@
 
 Many biologists are interested in teaching computing skills or using computing in the classroom, despite not being formally trained in these skills themselves.
 Thus biologists may find themselves researching how to teach these skills,
-and therefore many individuals are attempting to individually discover the resources and methods to do so.
-Recent years have seen an explosion of new technologies to assist in delivering course content,
-and educational research provides new insights into how learners absorb and process information.
-In this review, we discuss the value of teaching foundational computing skills to biologists and 
+and therefore many individuals are individually attempting to discover resources and methods to do so.
+Recent years have seen an expansion of new technologies to assist in delivering course content interactively.
+Educational research provides insights into how learners absorb and process information during interactive learning.
+In this review, we discuss the value of teaching foundational computing skills to biologists, and 
 strategies and tools to do so.
 Additionally, we review the literature on teaching practices to support the development of these skills.
 We pay special attention to meeting the needs of diverse learners, and consider how different ways of delivering course content can be leveraged to provide a more inclusive classroom experience.
@@ -49,15 +49,15 @@ Our goal is to enable biologists to teach computational skills and use computing
 
 %\rs{Lots of good refs in Madlung 2018. Also, perhaps someone can smooth out the writing of the intro - I think most of the content is there but it's a little choppy.} %\cn{Is smoothing out the writing (of sec. 2) still an area of need in y'all's opinion? I read through it and think it's fine.}
 
-Biology departments are increasingly offering or considering course work incorporating hands-on computation
+Biology departments are increasingly offering or considering course work that incorporates hands-on computation
 \citep{WilsonSayres18}. 
 There are different rationales for courses that include computation.
-Perhaps the most obvious is to teach computational biology, bioinformatics,
+Perhaps the most obvious rationale is to teach computational biology, bioinformatics,
 and/or skills in working with large datasets.
-In such courses, instructors may be teaching particular skills or tools that are an integral part of the field.
 Bioinformatic skills are increasingly a core component of biology and biology education, and 
 support students' job and/or graduate school preparation \citep{WilsonSayres18}. 
 The vast majority of researchers in biology either use large datasets or could do so with sufficient training, suggesting that general training in effective use of large datasets is essential for students as well \citep{Barone17,Loman13}.
+Thus, in such courses, instructors teach particular skills or tools that are an integral part of the field.
 An alternate motivation is to incorporate more data and analysis into course work.
 Integrating data into courses provides more opportunity for students to experience the research process, and the ability to incorporate active learning activities where
 students recognize biological theories by drawing conclusions from their own results
@@ -65,7 +65,7 @@ students recognize biological theories by drawing conclusions from their own res
 Another rationale for teaching computational skills is to increase data literacy \citep{Gibson18}, which, in addition to enhancing learners' preparation for future careers, also better prepares learners to think critically about societal issues relevant to science and policy \citep{cook2014}.
 
 However, there are significant barriers to teaching hands-on computation in biology classrooms \citep{Williams17}.
-While many biologists use computation in their research, relatively few have explicit training in computation. 
+While many biologists use computation in their research, relatively few have explicit training in this area. 
 Fewer still have training in how to teach computation \citep{Williams17}.
 Importantly, few biologists are housed in a department with the existing expertise or infrastructure for teaching computation \citep{Williams17};
 thus, there is often less familiarity with options for teaching computing or recent best practices. 
@@ -86,7 +86,7 @@ and describes effective strategies for teaching coding and data analysis.
 
 
 %rs: this is the how section
-An important consideration is that any technology an educator uses to deliver their content supports the educator's learning objectives and enhances students' ability to learn. 
+An important consideration is that whichever technology an educator uses to deliver their content supports the educator's learning objectives and enhances students' ability to learn. 
 Every course has a unique set of learning objectives, and
 every group of learners poses a unique set of challenges. 
 Such learning objectives related to computing may range from engaging students in the value of basic coding skills to building advanced skills and the ability to self-teach and work independently.
@@ -101,7 +101,7 @@ This may range from one or a few pieces of software that can be downloaded from 
 to installation of a computing language and development environment.
 For simplicity,
 the interfaces used by learners and the instructor should be uniform, as different versions of software could have different interfaces or commands.
-Learners also need  a way to compute outside of class -- for example, to do the homework outside class hours.
+Learners also need  a way to compute outside of class --- for example, to do the homework outside class hours.
 Finally, the computing platform should allow students to focus on the coursework and instruction. 
 The learning platform must not interfere with students' focus on the learning objectives.
 %\rs{something about it's worth considering these ideas and choosing a platform that facilitates learning}
@@ -128,8 +128,8 @@ Lastly, we review effective pedagogical techniques for helping learners thrive i
 One of the first choices an instructor needs to make when they plan coursework is what computing language to use.
 In biology, R and Python are common languages.
 Bash, a type of UNIX command-line language, is commonly used to run software and automate tasks.
-There are multiple considerations to take into account for this choice.
-In particular, taking into account \textit{consistency}, \textit{current status of research tools}, and \textit{comfort} will make this choice easier.
+There are multiple considerations to take into account for this choice, including
+\textit{consistency}, \textit{current status of research tools}, and \textit{comfort}.
 \textit{Consistency} refers to consistency of the language's use throughout the curriculum.
 Switching languages can be associated with learning loss in novices \citep{wu1990}.
 Therefore, in order to deepen and strengthen learners' command of languages, integrating the same language consistently throughout the curriculum may be helpful.
@@ -142,6 +142,7 @@ For example, many genomics and phylogenetics tools are written in Python.
 On the other hand, more ecological and comparative biology tools are written in R.
 %\rs{There are how-tos for both}
 Therefore, the choice of language will inform the subset of tools available to the instructor and the learners.
+
 Finally, instructors should consider their own \textit{comfort}. 
 Teaching requires fluent and comfortable discussion of concepts and tools.
 Instructor knowledge must factor in to this.
@@ -163,11 +164,11 @@ In particular, the tidyverse set of packages provided by RStudio provides
 convenient, well-supported, and intuitive functions for plotting and manipulating data.
 %\rs{tidyverse has enabled ease of use, and can even be used for accessing databases easily;
 Bioconductor \citep{bioconductor} has a wide variety of packages related to genomic data, as well as tutorials for this use, while other packages such as ape \citep{ape} 
-provide resources for specific tasks such as reading and viewing phylogenies ,
+provide resources for specific tasks such as reading and viewing phylogenies,
 and many other packages are available with easy-to-follow vignettes.
 
-Python is a widely-used general purpose programming language.
-Python is widely used in a variety of industries %(https://stackoverflow.blog/2017/09/06/incredible-growth-python/).
+Python is a general purpose programming language
+used in a wide variety of industries %(https://stackoverflow.blog/2017/09/06/incredible-growth-python/).
 and can be adapted to many purposes. 
 For example, the popular data science library Pandas \citep{pandas} can be used for teaching foundational data skills.
 Python also has a variety of resources for teaching work with non-spreadsheet data.
@@ -247,7 +248,7 @@ In classes that have learners do analytical work requiring substantial computati
 Single-board computers (SBCs) are minimalist, complete computers built on a
 single circuit board.
 There are a number of organizations in the single-board computer market, but
-they were first popularized by the the Raspberry Pi Foundation.
+they were first popularized by the Raspberry Pi Foundation.
 The most basic SBC models cost as little as \$10 and offer WiFi, Bluetooth,
 and quite high-performance computing.
 %\rs{also you can get a pretty solid computer for \$99}
@@ -258,7 +259,7 @@ An SBC is not immediately useful on its own, because it does not have a monitor
 or input devices.
 However, these machines can be used
 (1) as a server, by logging in ``remotely'' from another machine via WiFi or
-wired connection -- for example, using secure shell (SSH) protocol --
+wired connection --- for example, using secure shell (SSH) protocol ---
 or
 (2) as a standard Linux PC, by booting into the desktop environment and using
 attached input and output devices (e.g., monitor, keyboard, and mouse).
@@ -385,7 +386,7 @@ Many cloud-based computing platforms are agnostic to the type of machine on whic
 For example, JupyterHub and RStudio Server can be deployed on any machine with Unix or Linux supported. 
 This machine can be owned by an instructor, a high-performance cluster (HPC) computer operated by a university, or cloud 
 computing resources rented by the instructor.
-The main considerations for what type of machine to run the a cloud-based computing platform are memory, storage, and access.
+The main considerations for choosing what type of machine to run a cloud-based computing platform are memory, storage, and access.
 For courses with low-memory tasks, such as data processing on small datasets, a single machine may be sufficient, even with large numbers of users.
 For high-memory tasks (such as genome assembly), or tasks that with long runtimes (such as phylogenetic estimation), 
 cloud compute resources that can be resized from week to week may be more suitable.
@@ -393,7 +394,7 @@ For example, platforms such as Digital Ocean and Amazon Web Services allow users
 The server can be resized between class periods to allow more memory to be available to learners.
 This flexibility can allow an instructor to run a course on the resources they have available to them, based on their available infrastructure and funds.
 
-Many faculty will require IT support to set up the server, especially if the server is used by a large population. However, in our experience once setup is complete, maintenance requires minimal time and having IT handle upgrades and additional users relieves faculty of some work. The size of the server required for even large numbers of students to do analyses can be quite minimal (e.g.\ just 4 cores for hundreds of students) provide they are conducting analyses of relatively small datasets (e.g.\ hundreds of samples). 
+Many faculty will require IT support to set up the server, especially if the server is used by a large population. However, in our experience once setup is complete, maintenance requires minimal time and having IT handle upgrades and additional users relieves faculty of some work. The size of the server required for even large numbers of students to do analyses can be quite minimal (e.g.\ just 4 cores for hundreds of students), provided they are conducting analyses of relatively small datasets (e.g.\ hundreds of samples). 
 
 \subsection{Disadvantages of cloud-based computing platforms}\label{subsub:cloud-disdvantage}
 
@@ -422,6 +423,7 @@ class without the ability to work independently outside the classroom.
 They have not learned how to install the programming language or IDE, and these 
 are not installed on their personal computer.
 Additionally, they do not have or know how to install supporting packages.
+If the goal is for students to be equipped for independent work, the instructor should be sure to introduce these skills explicitly during the semester.
 
 
 \subsection{RStudio Server}\label{subsub:RStudio}
@@ -460,36 +462,13 @@ These documents can have text, images, and code cells that run and render output
 The Jupyter Notebook was originally developed as the iPython notebook, but has since expanded to include language support for other popular languages such as R and Julia.
 A JupyterHub is a server on which an instructor can deliver lessons via Jupyer Notebooks to a full classroom of students using a standardized server environment.
 In most cases, the server will be accessed via the internet.
-
-A JupyterHub typically has four components. 
-\textbf{The Hub} itself coordinates user log-ins and spawns \textbf{single-user notebook server (SUNS)} for learners to use.
-These SUNS allow learners to access the Jupyter interface and course content.
-By default, these are intended to be private, and to enable a learner to save their work on the JupyterHub for later retrieval. 
-\textbf{The proxy} receives input from the learner via their Jupyter interface. 
-When a learner enters information in their notebook, runs code, or renders text, the proxy passes the commands to the Hub to execute. 
-Lastly, \textbf{the authenticator} handles the log in of accounts.
-This ensures that only authorized users can access the JupyterHub. 
-
-\subsubsection{What are the advantages of a JupyterHub?}
-
 The first and foremost reason to use a JupyterHub is that you want to teach with the Jupyter ecosystem of tools.
 The Jupyter Notebook is commonly used in education in the sciences.
 It allows the instructor to develop a set of instructional materials that include text, code, and images.
 In this way, detailed notes can be provided from the instructor to the learner, and the learner can augment these lessons with their own notes, annotations, and code.
 Though originally invented for use with Python, Jupyter Notebooks are compatible with a number of languages.
 Multiple languages can even be used in one notebook, making them ideal for use with multi-language pipelines.
-The JupyterHub also has a command-line terminal and the Git revision management system installed, for more advanced courses.
-
-All four components of the JupyterHub are configurable.
-This makes the tool very extensible. 
-For example, a small course can often use a single computer to manage users.
-A course with many students or heavy computations can take advantage of different spawners to use compute resources effectively.
-Likewise, different authentication systems can be used if different levels of stringency for server access are required.
-While a JupyterHub does require an internet connection to use, course materials can be downloaded by learners to interact with the materials offline. 
-In sum, this is a flexible tool, and one that allows an instructor to scale their course service as the number of students and the computational demands of the material fluctuate. 
-
-
-\subsubsection{What are the disadvantages of a JupyterHub?}
+The JupyterHub also has a command-line terminal and the Git version control system installed, for more advanced courses.
 
 Jupyter supports the R language.
 However, the interface for R in Jupyter is different than RStudio, a dominant way to interact with R.
@@ -507,7 +486,7 @@ While there is a text editor for preparing scripts, and a command line to run sc
 RStudio Server and JupyterHub will typically require that instances are \textit{hosted} somewhere.
 This refers to having the compute platform installed in a central location, at which it can be accessed by all students.
 It may be possible for an instructor to host their course platform on a computer or server they personally own.
-However, many universities prohibit faculty from hosting servers on-campus that will be available off-campus due to security concerns with allowing off-campus computers to access on-campus resources.
+However, universities may prohibit faculty from hosting servers on-campus that will be available off-campus due to security concerns with allowing off-campus computers to access on-campus resources.
 This means that you may be able to host a server via the intranet, but if students go home for the weekend, or live off-campus, they'll need to come back on to campus to do their homework.
 
 These limitations cause many instructors to look for alternative ways to provide their course platforms to students.
@@ -518,7 +497,7 @@ These facilities often also service educators.
 A benefit to serving course content via high-performance cluster computing is that these resources are often free for educators at the university where the computer resides.
 Because these services are often in-house, the administrators of them are able to handle any specialized security concerns with the course platform.
 National level high-performance cluster computers, such as CIPRES, JetStream and CyVerse also offer resources for US institutions.
-For campuses with limtations on HPC use, IT may be able to set up an independent virtual machine
+For campuses with limitations on HPC use, IT may be able to set up an independent virtual machine
 on other existing university servers.
 
 However, not every university has a high-performance cluster computer that is set up to host coursework. 
@@ -553,7 +532,7 @@ Docker,
 Singularity,
 or
 Podman,
-offer a way to \rsedit{bridge the gap between}{} teach\rsedit{ing}{} with \rsedit{}{the simplicity of }local installs \rsedit{and}{while utilizing the consistency of}
+offer a way to teach with the simplicity of local installs while utilizing the consistency of
 cloud-based computing platforms.
 Containers allow the instructor to create a standard computing environment that
 each student can work within on their own computer.
@@ -579,7 +558,7 @@ students run analyses on their own computer.
 %above commented out as this seems to be taken care of
 
 Designing an effective biology course that incorporates computing requires more than choosing the best computing platform for your needs. Skills-based courses such as coding necessitate a unique approach to teaching that can differ in some ways from more commonly used pedagogy in content-based courses. 
-For many learners, a biology course that involves hands-on computing may be their first classroom experience that heavily involves learning increasingly complex skills that build off of each other, rather than primarily learning content. And similarly, instructors whose research and teaching expertise is in a field that is not strictly computational -- which likely includes most instructors of biology -- may benefit from guidance on best practices for delivering content effectively and addressing the unique challenges that arise. As a skills-based discipline, computation 
+For many learners, a biology course that involves hands-on computing may be their first classroom experience that heavily involves learning increasingly complex skills that build off of each other, rather than primarily learning content. And similarly, instructors whose research and teaching expertise is in a field that is not strictly computational --- which likely includes most instructors of biology --- may benefit from guidance on best practices for delivering content effectively and addressing the unique challenges that arise. As a skills-based discipline, computation 
 %\rs{I would avoid a narrow focus on comp bio and broaden to allow any course with computing such as data analysis} \cn{Agreed - I changed "computational biology" to "computation"(is that considered a discipline, or should we change that wording?)} 
 necessarily requires some level of active in-class interaction from learners (with the instructor or peers, or with the material itself). Thoughtful implementation of appropriate active learning strategies has been shown to increase both mastery of content and development of general skills such as critical thinking and collaboration \citep{faust_paulson_1998}. Below, we describe several strategies for teaching coding and address challenges that instructors may face in teaching a course that is perhaps more similar methodologically to math and foreign language than to other biology courses.
 We acknowledge that each section summarizes and simplifies a significant body of literature
@@ -603,7 +582,9 @@ first show learners some written examples, perhaps in pre-reading for a class, t
 Written examples are often a good starting point to introduce learners to the concepts and structure of solutions.
 Written tutorials allow learners to go at their own pace.
 This ensures learners take the time they need.
-However, learners frequently skim over static written examples, confident that they understand what the code is doing, without critically evaluating the code or skipping formative assessment questions, thus not truly ensuring their understanding.
+However, learners frequently skim over static written examples or skip formative assessment questions, 
+confident that they understand what the code is doing.
+Students may need to be required to critically evaluate the code to truly ensuring their understanding.
 For this reason, written examples are most effective when integrated with other example-based learning methods \citep{renkl_learning_2014}.
 
 
@@ -657,7 +638,7 @@ When the learning outcomes are not necessarily tied to learners having full mast
 This method, called pseudocode, can help learners logically scaffold their thought process, and therefore their code, regardless of which language they will be coding in.
 Learners can be required to write the solution to their problem in pseudocode to demonstrate their thought process, and then use that pseudocode to write their code \citep[e.g.,][]{olsen_using_2005}.
 Courses may rely on pseudocode during timed exams to relieve exam stress.
-Note, however, that if learners are expected to interpret or elaborate on pseudocode -- especially in an exam setting -- that the 
+Note, however, that if learners are expected to interpret or elaborate on pseudocode --- especially in an exam setting --- that the 
 %that pseudocode written by different examiners may differ in its adherence to unwritten language rules, and thus could cause confusion among learners \citep{cutts_code_2014}. 
 %A better approach is to use a formalized pseudocode, where the 
 meaning behind each pseudocode term is clearly and unambiguously defined \citep{cutts_code_2014}.
@@ -665,6 +646,7 @@ meaning behind each pseudocode term is clearly and unambiguously defined \citep{
 %\sarah{I rephrased the last two sentences. Are they any better now?}
 %\aw{I like that}
 %\rs{might cite Resnick papers here}
+%\sarah{add any citations you think are relevant!}
 
 \subsection{Cooperative Learning} 
 %\sarah{I re-named this from pair-based learning to cooperative learning to include group work}
@@ -709,7 +691,7 @@ This demonstration is especially powerful when the learners are enabled to disco
 For example, an instructor could provide students with a large dataset and encourage the learners to try basic analyses (e.g., producing summary statistics or basic plots) in both R and Excel. 
 %\rs{even more than this - self-discovery ie here's a big dataset and discover how much better it is not to do this in excel - is stronger than demonstration}
 %\sarah{This is an excellent point. I've tried to incorporate it above, but feel free to edit}
-Particularly when learners have not opted into learning computational skills -- for example, when computational skills are incorporated into required biology classes -- showing learners the value of saving future time and effort is very important. 
+Particularly when learners have not opted into learning computational skills --- for example, when computational skills are incorporated into required biology classes --- showing learners the value of saving future time and effort is very important. 
 
 
 \subsubsection{Teaching how to ask for help}
@@ -760,13 +742,13 @@ Instructors are encouraged to discuss issues surrounding intellectual property a
 
 Computing is increasingly being incorporated into coursework at all levels in biology.
 Computing is both a key skill for learners and supports additional learning by enabling the incorporation of data and analysis into classrooms. 
-Instructors have a range of choices in front of them for how to deliver computational lessons.
+Instructors have a range of choices to deliver computational lessons.
 From the computing platform to how the instructor delivers the lesson, every aspect of a computational classroom can shape learners' knowledge and confidence. 
 In this paper, we have outlined the costs and benefits of several popular computing platforms.
 Given the variety of options, instructors should be able to find a platform that best fits their course learning objectives, available resources, class size, and learner backgrounds.
 One important consideration in this decision is how the platform of choice affects learner access to course content.
-Many of these computing platforms can improve inclusion and diversity in the classroom (and thus, ultimately, in fields and careers that incorporate computation) by providing access to the same technologies to all learners.
-We have also discussed several teaching strategies for computational biology and other courses with computation, with the goal of improving student learning and retention.
+Many of these computing platforms can support inclusion in the classroom (and thus, ultimately, in fields and careers that incorporate computation) by providing access to the same technologies to all learners.
+We have also discussed several teaching strategies for computational biology and other courses with computation, with the goal of improving student engagement, learning, and retention.
 
 %Main takeaways: 
 %All types of computing platforms have pros and cons.

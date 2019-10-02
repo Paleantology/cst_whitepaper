@@ -29,3 +29,12 @@
 %In addition, as in most fields of study, computational biology \rs{need an alternate phrase - this is narrow}
 %outline a variety of methods for teaching computational content.
 %, such as interactive tutorial sessions (live coding) and student-centered cooperative learning. 
+
+A JupyterHub typically has four components. 
+\textbf{The Hub} itself coordinates user log-ins and spawns \textbf{single-user notebook server (SUNS)} for learners to use.
+These SUNS allow learners to access the Jupyter interface and course content.
+By default, these are intended to be private, and to enable a learner to save their work on the JupyterHub for later retrieval. 
+\textbf{The proxy} receives input from the learner via their Jupyter interface. 
+When a learner enters information in their notebook, runs code, or renders text, the proxy passes the commands to the Hub to execute. 
+Lastly, \textbf{the authenticator} handles the log in of accounts.
+This ensures that only authorized users can access the JupyterHub. 
